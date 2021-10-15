@@ -9,6 +9,6 @@ export const Microphone = styled.span`
     border-radius: 50%;
     background-color: #F8F8F8;
     position: relative;
-    right: 3%;
+    right: 4%;
     cursor: pointer;
 `;

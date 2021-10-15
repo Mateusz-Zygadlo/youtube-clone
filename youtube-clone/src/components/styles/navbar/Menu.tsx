@@ -8,4 +8,5 @@ export const Menu = styled.span`
     align-items: center;
     font-size: 26px;
     cursor: pointer;
+    color: black;
 `;

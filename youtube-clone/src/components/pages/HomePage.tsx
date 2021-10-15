@@ -2,11 +2,16 @@ import React from "react";
 import { GlobalStyle } from "../styles/GlobalStyle";
 import { Navbar } from '../Navbar';
 
-export const HomePage: React.FC = () => {
+interface Props {
+    setWidthFunc(props: boolean): void;
+    width: boolean;
+  }
+
+export const HomePage: React.FC<Props> = ({ setWidthFunc, width }) => {
     return(
         <div>
             <GlobalStyle />
-            <Navbar />
+            <Navbar setWidthFunc={setWidthFunc} width={width} />
         </div>
     )
 }
