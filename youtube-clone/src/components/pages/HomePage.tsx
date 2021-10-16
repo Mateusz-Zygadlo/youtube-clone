@@ -7,8 +7,7 @@ import { MainContent } from '../styles/MainContent';
 
 export const HomePage: React.FC = () => {
     const [isOpen, setNavOpen] = useState<boolean>(true);
-    const [isLogin, setLogin] = useState<boolean>(false);
-    const [widthSize, setWidthSize] = useState<number>(1400);
+    const [isLogin, setLogin] = useState<boolean>(true);
 
     useEffect(() => {
         const resizeFunc = () => {
@@ -18,7 +17,6 @@ export const HomePage: React.FC = () => {
                 }else if(window.innerWidth < 1300 && window.innerWidth > 700 && isOpen){
                     setNavOpen(false);
                 }
-                setWidthSize(window.innerWidth);
             }
         }
 

@@ -16,12 +16,13 @@ import { MoreCategory } from './styles/categorySection/MoreCategory';
 
 interface Props{
     isLogin: boolean;
+    fixed?: string;
 }
 
-export const Category: React.FC<Props> = ({ isLogin }) => {
+export const Category: React.FC<Props> = ({ isLogin, fixed }) => {
     return(
         <>
-            <CategoryContainer>
+            <CategoryContainer fixed={fixed}>
                 <Popular>
                     <CategoryCard>
                         <Icon className="material-icons">home</Icon>

@@ -1,7 +1,12 @@
 import styled from "styled-components";
 
-export const CategoryContainer = styled.div`
-    width: 300px;
+interface Props{
+    fixed?: string;
+}
+
+export const CategoryContainer = styled.div<Props>`
+    width: 240px;
     height: 100%;
     overflow-y: scroll;
+    position: ${props => props.fixed ? 'fixed' : 'static'}
 `;
