@@ -20,18 +20,21 @@ import { Login } from "./styles/navbar/Login";
 import { Button } from "./styles/navbar/Button";
 import { Paragraph } from "./styles/navbar/Paragraph";
 
-
-interface Props {
-    setWidthFunc(props: boolean): void;
-    width: boolean;
+interface Props{
+    openNavFunc(props: boolean): void;
+    isOpen: boolean;
+    isLogin: boolean;
 }
 
-export const Navbar: React.FC<Props> = ({ setWidthFunc, width }) => {
+export const Navbar: React.FC<Props> = ({ openNavFunc, isOpen, isLogin }) => {
     const ref = useRef<any>(null);
     const [testWidth, setWidth] = useState<boolean>(false);
     const [widthSize, setWidthSize] = useState<number>(0);
     const [searchMobile, setSearchMobile] = useState<boolean>(false);
-    const [isLogin, setIsLogin] = useState<boolean>(true);
+
+    const clickNavbarMenu = (props: boolean): void => {
+        openNavFunc(!isOpen);
+    }
 
     useEffect(() => {
         const resizeFunc = () => {
@@ -58,7 +61,7 @@ export const Navbar: React.FC<Props> = ({ setWidthFunc, width }) => {
             {!testWidth ? 
                 <NavContainer ref={ref}>
                     <Symbol>
-                        <Menu className="material-icons">menu</Menu>
+                        <Menu className="material-icons" onClick={(): void => {clickNavbarMenu(isOpen)}}>menu</Menu>
                         <Youtube>
                             <YoutubeLogo src={Logo} />
                             <YoutubeLegend>
@@ -100,7 +103,7 @@ export const Navbar: React.FC<Props> = ({ setWidthFunc, width }) => {
                     {!searchMobile ? 
                         <NavContainer>
                             <Symbol>
-                                <Menu className="material-icons">menu</Menu>
+                                <Menu className="material-icons" onClick={(): void => {clickNavbarMenu(isOpen)}}>menu</Menu>
                                 <Youtube>
                                     <YoutubeLogo src={Logo} />
                                     <YoutubeLegend>

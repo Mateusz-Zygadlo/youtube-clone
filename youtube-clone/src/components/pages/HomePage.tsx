@@ -1,17 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { GlobalStyle } from "../styles/GlobalStyle";
 import { Navbar } from '../Navbar';
+import { CategorySection } from '../CategorySection';
+import { MainContent } from '../styles/MainContent';
 
-interface Props {
-    setWidthFunc(props: boolean): void;
-    width: boolean;
-  }
 
-export const HomePage: React.FC<Props> = ({ setWidthFunc, width }) => {
+export const HomePage: React.FC = () => {
+    const [isOpen, setNavOpen] = useState<boolean>(true);
+    const [isLogin, setLogin] = useState<boolean>(false);
+
+    const openNav = (props: boolean): void => {
+        setNavOpen(props);
+    }
+
     return(
-        <div>
+        <>
             <GlobalStyle />
-            <Navbar setWidthFunc={setWidthFunc} width={width} />
-        </div>
+            <Navbar openNavFunc={openNav} isOpen={isOpen} isLogin={isLogin} />
+            <MainContent>
+                <CategorySection isOpen={isOpen} openNavFunc={openNav} isLogin={isLogin} />
+            </MainContent>
+        </>
     )
 }
