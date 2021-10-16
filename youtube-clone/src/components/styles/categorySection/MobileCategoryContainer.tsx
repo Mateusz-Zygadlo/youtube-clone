@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const MobileCategoryContainer = styled.div`
+    position: fixed;
+    top: 56px;
     width: 72px;
-    height: 100%;
+    height: calc(100vh - 56px);
 `;

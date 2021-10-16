@@ -32,7 +32,7 @@ export const CategorySection: React.FC<Props> = ({ isOpen, openNavFunc, isLogin 
             : (widthSize > 700) ?
                 isOpen ? <Category isLogin={isLogin} /> : <MobileCategory />
             : 
-                isOpen ? <Category isLogin={isLogin} fixed='fixed' /> : null
+                isOpen ? <Category isLogin={isLogin} /> : null
             }
         </>
     )

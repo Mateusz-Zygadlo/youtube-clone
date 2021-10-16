@@ -24,9 +24,11 @@ interface Props{
     openNavFunc(props: boolean): void;
     isOpen: boolean;
     isLogin: boolean;
+    setMobileWidthFunc(props: boolean): void;
+    mobileWidth: boolean;
 }
 
-export const Navbar: React.FC<Props> = ({ openNavFunc, isOpen, isLogin }) => {
+export const Navbar: React.FC<Props> = ({ openNavFunc, isOpen, isLogin, setMobileWidthFunc, mobileWidth }) => {
     const ref = useRef<any>(null);
     const [testWidth, setWidth] = useState<boolean>(false);
     const [widthSize, setWidthSize] = useState<number>(0);
@@ -61,7 +63,7 @@ export const Navbar: React.FC<Props> = ({ openNavFunc, isOpen, isLogin }) => {
             {!testWidth ? 
                 <NavContainer ref={ref}>
                     <Symbol>
-                        <Menu className="material-icons" onClick={(): void => {clickNavbarMenu(isOpen)}}>menu</Menu>
+                        <Menu className="material-icons" onClick={(): void => {clickNavbarMenu(isOpen); setMobileWidthFunc(mobileWidth)}}>menu</Menu>
                         <Youtube>
                             <YoutubeLogo src={Logo} />
                             <YoutubeLegend>
@@ -103,7 +105,7 @@ export const Navbar: React.FC<Props> = ({ openNavFunc, isOpen, isLogin }) => {
                     {!searchMobile ? 
                         <NavContainer>
                             <Symbol>
-                                <Menu className="material-icons" onClick={(): void => {clickNavbarMenu(isOpen)}}>menu</Menu>
+                                <Menu className="material-icons" onClick={(): void => {clickNavbarMenu(isOpen); setMobileWidthFunc(mobileWidth)}}>menu</Menu>
                                 <Youtube>
                                     <YoutubeLogo src={Logo} />
                                     <YoutubeLegend>
