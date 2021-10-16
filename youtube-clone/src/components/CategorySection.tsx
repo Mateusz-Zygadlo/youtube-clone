@@ -16,13 +16,6 @@ export const CategorySection: React.FC<Props> = ({ isOpen, openNavFunc, isLogin 
             if(window.innerWidth){
                 setWidthSize(window.innerWidth);
             }
-            if(window.innerWidth > 1300){
-                openNavFunc(true);
-            }
-            if(window.innerHeight > 700){
-                openNavFunc(false);
-            }
-            console.log(widthSize);
         }
 
         window.addEventListener('resize', resizeFunc);
