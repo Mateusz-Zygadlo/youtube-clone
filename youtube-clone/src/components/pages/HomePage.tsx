@@ -13,8 +13,6 @@ export const HomePage: React.FC = () => {
     const [isLogin, setLogin] = useState<boolean>(true);
     const [mobileWidth, setMobileWidth] = useState<boolean>(false);
     const [minimum, setMinimum] = useState<boolean>(false);
-    const [isOk, setIsOk] = useState<boolean>(false)
-
 
     const setMobileWidthFunc = (props: boolean): void => {
         setMobileWidth(!props);
@@ -23,17 +21,16 @@ export const HomePage: React.FC = () => {
     useEffect(() => {
         const resizeFunc = () => {
             if(window.innerWidth){
-                if(window.innerWidth < 1300){
-                    setIsOk(true);
-                }else{
-                    setIsOk(false);
-                }
-                if(window.innerWidth > 1300 && !isOpen){
+                if(window.innerWidth > 1300){
                     setNavOpen(true);
                     setMobileWidth(false);
-                }else if(window.innerWidth < 1300 && window.innerWidth > 700 && isOpen){
+                }else if(window.innerWidth < 1300 && window.innerWidth > 700){
                     setNavOpen(false);
                     setMobileWidth(true);
+                }else{
+                    setMinimum(true);
+                    setMobileWidth(true);
+                    setNavOpen(false);
                 }
                 if(window.innerWidth < 700){
                     setMinimum(true);
@@ -65,7 +62,7 @@ export const HomePage: React.FC = () => {
                 mobileWidth={mobileWidth} />
             <MainContent>
                 <CategorySection isOpen={isOpen} openNavFunc={openNav} isLogin={isLogin} />
-                <VideoPlace mobileWidth={mobileWidth} minimum={minimum} isOk={isOk}>
+                <VideoPlace mobileWidth={mobileWidth} minimum={minimum}>
                     <TrendingBar mobileWidth={mobileWidth} minimum={minimum}>
                         <TrendingName>Javascript</TrendingName>
                         <TrendingName>Computer</TrendingName>

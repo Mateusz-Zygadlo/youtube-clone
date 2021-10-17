@@ -7,7 +7,7 @@ interface Props{
 
 export const TrendingBar = styled.div<Props>`
     position: fixed;
-    width: ${props => props.mobileWidth ? (props.mobileWidth && props.minimum === true) ? '100%' : 'calc(100% - 82px)' : 'calc(100% - 240px)'};
+    width: 100%;
     height: 56px;
     background-color: white;
     border-top: 1px solid black;
@@ -16,5 +16,6 @@ export const TrendingBar = styled.div<Props>`
     align-items: center;
     color: black;
     overflow-x: scroll;
-    margin-left: ${props => props.mobileWidth ? '-5px' : '0px'};
+    width: ${props => props.mobileWidth ? (props.mobileWidth && props.minimum === true) ? '100%' : 'calc(100% - 85px)' : 'calc(100% - 240px)'};
+    left: ${props => props.mobileWidth === true ? (props.minimum === true) ? '0px' : '85px'  : '240px'};
 `;

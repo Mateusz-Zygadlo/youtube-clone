@@ -31,11 +31,16 @@ interface Props{
 export const Navbar: React.FC<Props> = ({ openNavFunc, isOpen, isLogin, setMobileWidthFunc, mobileWidth }) => {
     const ref = useRef<any>(null);
     const [testWidth, setWidth] = useState<boolean>(false);
-    const [widthSize, setWidthSize] = useState<number>(0);
+    const [widthSize, setWidthSize] = useState<number>(1400);
     const [searchMobile, setSearchMobile] = useState<boolean>(false);
 
     const clickNavbarMenu = (props: boolean): void => {
-        openNavFunc(!isOpen);
+        if(widthSize > 1300){
+            openNavFunc(!props);
+            setMobileWidthFunc(!props);
+        }else{
+            openNavFunc(!props);
+        }
     }
 
     useEffect(() => {
@@ -53,6 +58,8 @@ export const Navbar: React.FC<Props> = ({ openNavFunc, isOpen, isLogin, setMobil
 
         window.addEventListener('resize', resizeFunc);
 
+        console.log('click');
+
         return () => {
             window.removeEventListener('resize', resizeFunc);
         }
@@ -63,7 +70,7 @@ export const Navbar: React.FC<Props> = ({ openNavFunc, isOpen, isLogin, setMobil
             {!testWidth ? 
                 <NavContainer ref={ref}>
                     <Symbol>
-                        <Menu className="material-icons" onClick={(): void => {clickNavbarMenu(isOpen); setMobileWidthFunc(mobileWidth)}}>menu</Menu>
+                        <Menu className="material-icons" onClick={(): void => {clickNavbarMenu(isOpen)}}>menu</Menu>
                         <Youtube>
                             <YoutubeLogo src={Logo} />
                             <YoutubeLegend>
@@ -105,7 +112,7 @@ export const Navbar: React.FC<Props> = ({ openNavFunc, isOpen, isLogin, setMobil
                     {!searchMobile ? 
                         <NavContainer>
                             <Symbol>
-                                <Menu className="material-icons" onClick={(): void => {clickNavbarMenu(isOpen); setMobileWidthFunc(mobileWidth)}}>menu</Menu>
+                                <Menu className="material-icons" onClick={(): void => {clickNavbarMenu(isOpen)}}>menu</Menu>
                                 <Youtube>
                                     <YoutubeLogo src={Logo} />
                                     <YoutubeLegend>
