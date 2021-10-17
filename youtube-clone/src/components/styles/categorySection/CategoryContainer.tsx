@@ -7,4 +7,5 @@ export const CategoryContainer = styled.div`
     width: 240px;
     height: calc(100vh - 56px);
     overflow-y: scroll;
+    z-index: 1000
 `;

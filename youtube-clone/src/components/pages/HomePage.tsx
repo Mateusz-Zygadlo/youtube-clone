@@ -4,6 +4,8 @@ import { Navbar } from '../Navbar';
 import { CategorySection } from '../CategorySection';
 import { MainContent } from '../styles/MainContent';
 import { VideoPlace } from "../styles/VideoPlace";
+import { TrendingBar } from "../styles/TrendingBar/Trendingbar";
+import { TrendingName } from "../styles/TrendingBar/TrendingName";
 
 
 export const HomePage: React.FC = () => {
@@ -11,6 +13,7 @@ export const HomePage: React.FC = () => {
     const [isLogin, setLogin] = useState<boolean>(true);
     const [mobileWidth, setMobileWidth] = useState<boolean>(false);
     const [minimum, setMinimum] = useState<boolean>(false);
+    const [isOk, setIsOk] = useState<boolean>(false)
 
 
     const setMobileWidthFunc = (props: boolean): void => {
@@ -20,6 +23,11 @@ export const HomePage: React.FC = () => {
     useEffect(() => {
         const resizeFunc = () => {
             if(window.innerWidth){
+                if(window.innerWidth < 1300){
+                    setIsOk(true);
+                }else{
+                    setIsOk(false);
+                }
                 if(window.innerWidth > 1300 && !isOpen){
                     setNavOpen(true);
                     setMobileWidth(false);
@@ -57,8 +65,26 @@ export const HomePage: React.FC = () => {
                 mobileWidth={mobileWidth} />
             <MainContent>
                 <CategorySection isOpen={isOpen} openNavFunc={openNav} isLogin={isLogin} />
-                <VideoPlace mobileWidth={mobileWidth} minimum={minimum}>
-
+                <VideoPlace mobileWidth={mobileWidth} minimum={minimum} isOk={isOk}>
+                    <TrendingBar mobileWidth={mobileWidth} minimum={minimum}>
+                        <TrendingName>Javascript</TrendingName>
+                        <TrendingName>Computer</TrendingName>
+                        <TrendingName>Chess</TrendingName>
+                        <TrendingName>Ruby</TrendingName>
+                        <TrendingName>Music</TrendingName>
+                        <TrendingName>Python</TrendingName>
+                        <TrendingName>Movies</TrendingName>
+                        <TrendingName>Adobe</TrendingName>
+                        <TrendingName>Blender</TrendingName>
+                        <TrendingName>Live</TrendingName>
+                        <TrendingName>SpaceX</TrendingName>
+                        <TrendingName>Tesla</TrendingName>
+                        <TrendingName>Robots</TrendingName>
+                        <TrendingName>Cnc</TrendingName>
+                        <TrendingName>Seminars</TrendingName>
+                        <TrendingName>Facebook</TrendingName>
+                        <TrendingName>Instagram</TrendingName>
+                    </TrendingBar>
                 </VideoPlace>
             </MainContent>
         </>
