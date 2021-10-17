@@ -6,6 +6,17 @@ import { MainContent } from '../styles/MainContent';
 import { VideoPlace } from "../styles/VideoPlace";
 import { TrendingBar } from "../styles/TrendingBar/Trendingbar";
 import { TrendingName } from "../styles/TrendingBar/TrendingName";
+import { VideoSection } from "../styles/Video/VideoSection";
+import { Video } from "../styles/Video/Video";
+import { VideoImage } from "../styles/Video/VideoImage";
+import { ShortText } from "../styles/Video/ShortText";
+import { Avatar } from "../styles/navbar/Avatar";
+import { DescriptionVideo } from "../styles/Video/DescriptionVideo";
+import { TitleVideo } from "../styles/Video/TitleVideo";
+import { OwnerChannel } from "../styles/Video/OwnerChannel";
+import { Statistic } from "../styles/Video/Statistic";
+import { Views } from "../styles/Video/Views";
+import { Data } from "../styles/Video/Data";
 
 
 export const HomePage: React.FC = () => {
@@ -51,6 +62,8 @@ export const HomePage: React.FC = () => {
         setNavOpen(props);
     }
 
+    const trendingArr = ['Javascript', 'Computer', 'Chess', 'Ruby', 'Music', 'Python', 'Movies', 'Adobe', 'Blender', 'Live', 'SpaceX', 'Tesla', 'Robots', 'Cnc', 'Seminars', 'Facebook', 'Instagram']
+
     return(
         <>
             <GlobalStyle />
@@ -64,24 +77,26 @@ export const HomePage: React.FC = () => {
                 <CategorySection isOpen={isOpen} openNavFunc={openNav} isLogin={isLogin} />
                 <VideoPlace mobileWidth={mobileWidth} minimum={minimum}>
                     <TrendingBar mobileWidth={mobileWidth} minimum={minimum}>
-                        <TrendingName>Javascript</TrendingName>
-                        <TrendingName>Computer</TrendingName>
-                        <TrendingName>Chess</TrendingName>
-                        <TrendingName>Ruby</TrendingName>
-                        <TrendingName>Music</TrendingName>
-                        <TrendingName>Python</TrendingName>
-                        <TrendingName>Movies</TrendingName>
-                        <TrendingName>Adobe</TrendingName>
-                        <TrendingName>Blender</TrendingName>
-                        <TrendingName>Live</TrendingName>
-                        <TrendingName>SpaceX</TrendingName>
-                        <TrendingName>Tesla</TrendingName>
-                        <TrendingName>Robots</TrendingName>
-                        <TrendingName>Cnc</TrendingName>
-                        <TrendingName>Seminars</TrendingName>
-                        <TrendingName>Facebook</TrendingName>
-                        <TrendingName>Instagram</TrendingName>
+                        {trendingArr.map((item) => (
+                            <TrendingName key={item}>{item}</TrendingName>
+                        ))}
                     </TrendingBar>
+                    <VideoSection>
+                        <Video>
+                            <VideoImage></VideoImage>
+                            <ShortText>
+                                <Avatar></Avatar>
+                                <DescriptionVideo>
+                                    <TitleVideo>this is title in youtube clone with github react typescript and styled components</TitleVideo>
+                                    <OwnerChannel>youtube channel</OwnerChannel>
+                                    <Statistic>
+                                        <Views>3.4k views</Views>
+                                        <Data>2 years ago</Data>
+                                    </Statistic>
+                                </DescriptionVideo>
+                            </ShortText>
+                        </Video>
+                    </VideoSection>
                 </VideoPlace>
             </MainContent>
         </>

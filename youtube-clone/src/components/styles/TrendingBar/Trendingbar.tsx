@@ -18,4 +18,5 @@ export const TrendingBar = styled.div<Props>`
     overflow-x: scroll;
     width: ${props => props.mobileWidth ? (props.mobileWidth && props.minimum === true) ? '100%' : 'calc(100% - 85px)' : 'calc(100% - 240px)'};
     left: ${props => props.mobileWidth === true ? (props.minimum === true) ? '0px' : '85px'  : '240px'};
+    z-index: 10;
 `;
