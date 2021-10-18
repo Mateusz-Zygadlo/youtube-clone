@@ -24,9 +24,14 @@ export const HomePage: React.FC = () => {
     const [isLogin, setLogin] = useState<boolean>(true);
     const [mobileWidth, setMobileWidth] = useState<boolean>(false);
     const [minimum, setMinimum] = useState<boolean>(false);
+    const trendingArr = ['Javascript', 'Computer', 'Chess', 'Ruby', 'Music', 'Python', 'Movies', 'Adobe', 'Blender', 'Live', 'SpaceX', 'Tesla', 'Robots', 'Cnc', 'Seminars', 'Facebook', 'Instagram']
 
     const setMobileWidthFunc = (props: boolean): void => {
         setMobileWidth(!props);
+    }
+
+    const openNav = (props: boolean): void => {
+        setNavOpen(props);
     }
 
     useEffect(() => {
@@ -57,12 +62,6 @@ export const HomePage: React.FC = () => {
             window.removeEventListener('resize', resizeFunc);
         }
     });
-
-    const openNav = (props: boolean): void => {
-        setNavOpen(props);
-    }
-
-    const trendingArr = ['Javascript', 'Computer', 'Chess', 'Ruby', 'Music', 'Python', 'Movies', 'Adobe', 'Blender', 'Live', 'SpaceX', 'Tesla', 'Robots', 'Cnc', 'Seminars', 'Facebook', 'Instagram']
 
     return(
         <>
