@@ -19,49 +19,18 @@ import { Views } from "../styles/Video/Views";
 import { Data } from "../styles/Video/Data";
 
 
-export const HomePage: React.FC = () => {
-    const [isOpen, setNavOpen] = useState<boolean>(true);
-    const [isLogin, setLogin] = useState<boolean>(true);
-    const [mobileWidth, setMobileWidth] = useState<boolean>(false);
-    const [minimum, setMinimum] = useState<boolean>(false);
+interface Props{
+    openNavFunc(props: boolean): void;
+    isOpen: boolean;
+    isLogin: boolean;
+    setMobileWidthFunc(props: boolean): void;
+    mobileWidth: boolean;
+    openNav(props: boolean): void;
+    minimum: boolean;
+}
+
+export const HomePage: React.FC<Props> = ({ openNavFunc, isLogin, isOpen, setMobileWidthFunc, mobileWidth, openNav, minimum }) => {
     const trendingArr = ['Javascript', 'Computer', 'Chess', 'Ruby', 'Music', 'Python', 'Movies', 'Adobe', 'Blender', 'Live', 'SpaceX', 'Tesla', 'Robots', 'Cnc', 'Seminars', 'Facebook', 'Instagram']
-
-    const setMobileWidthFunc = (props: boolean): void => {
-        setMobileWidth(!props);
-    }
-
-    const openNav = (props: boolean): void => {
-        setNavOpen(props);
-    }
-
-    useEffect(() => {
-        const resizeFunc = () => {
-            if(window.innerWidth){
-                if(window.innerWidth > 1300){
-                    setNavOpen(true);
-                    setMobileWidth(false);
-                }else if(window.innerWidth < 1300 && window.innerWidth > 700){
-                    setNavOpen(false);
-                    setMobileWidth(true);
-                }else{
-                    setMinimum(true);
-                    setMobileWidth(true);
-                    setNavOpen(false);
-                }
-                if(window.innerWidth < 700){
-                    setMinimum(true);
-                }else{
-                    setMinimum(false);
-                }
-            }
-        }
-
-        window.addEventListener('resize', resizeFunc);
-
-        return () => {
-            window.removeEventListener('resize', resizeFunc);
-        }
-    });
 
     return(
         <>

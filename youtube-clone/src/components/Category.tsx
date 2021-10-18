@@ -13,6 +13,7 @@ import { UserAvatar } from './styles/categorySection/UserAvatar';
 import { UserNickname } from './styles/categorySection/UserNickname';
 import { AvatarImage } from './styles/categorySection/AvatarImage';
 import { MoreCategory } from './styles/categorySection/MoreCategory';
+import { Link } from 'react-router-dom'
 
 interface Props{
     isLogin: boolean;
@@ -24,8 +25,10 @@ export const Category: React.FC<Props> = ({ isLogin}) => {
             <CategoryContainer>
                 <Popular>
                     <CategoryCard>
-                        <Icon className="material-icons">home</Icon>
-                        <Paragraph>Home</Paragraph>
+                        <Link to='/'>
+                            <Icon className="material-icons">home</Icon>
+                            <Paragraph>Home</Paragraph>
+                        </Link>
                     </CategoryCard>
                     <CategoryCard>
                         <Icon className="material-icons">explore</Icon>

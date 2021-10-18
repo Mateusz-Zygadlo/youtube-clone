@@ -13,6 +13,8 @@ export const GlobalStyle = createGlobalStyle`
     a{
         text-decoration: none;
         color: black;
+        display: flex;
+        align-items: center;
     }
     ::-webkit-scrollbar {
         width: 5px;
