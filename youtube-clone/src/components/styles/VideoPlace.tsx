@@ -3,7 +3,6 @@ import styled from "styled-components";
 interface Props{
     mobileWidth: boolean;
     minimum?: boolean;
-    bg?: string;
 }
 
 export const VideoPlace = styled.div<Props>`
@@ -14,5 +13,4 @@ export const VideoPlace = styled.div<Props>`
     padding: 0;
     margin: 0;
     left: ${props => props.mobileWidth === true ? (props.minimum === true) ? '0px' : '85px'  : '240px'};
-    background-color: ${props => props.bg ? 'yellow' : null}
 `;

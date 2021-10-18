@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const ExploreContainer = styled.div`
     width: auto;
-    height: 3000px;
+    height: auto;
     margin: 0 auto;
     padding: 0 20px;
+    word-break: break-word;
 `;

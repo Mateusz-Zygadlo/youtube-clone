@@ -19,20 +19,22 @@ interface Props{
     isLogin: boolean;
 }
 
-export const Category: React.FC<Props> = ({ isLogin}) => {
+export const Category: React.FC<Props> = ({ isLogin }) => {
     return(
         <>
             <CategoryContainer>
                 <Popular>
                     <CategoryCard>
-                        <Link to='/'>
+                        <Link to='/home'>
                             <Icon className="material-icons">home</Icon>
                             <Paragraph>Home</Paragraph>
                         </Link>
                     </CategoryCard>
                     <CategoryCard>
-                        <Icon className="material-icons">explore</Icon>
-                        <Paragraph>Explore</Paragraph>
+                        <Link to='explore'>
+                            <Icon className="material-icons">explore</Icon>
+                            <Paragraph>Explore</Paragraph>
+                        </Link>
                     </CategoryCard>
                     <CategoryCard>
                         <Icon className="material-icons">subscriptions</Icon>

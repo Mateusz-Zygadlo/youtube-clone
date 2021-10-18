@@ -33,7 +33,6 @@ export const ExplorePage: React.FC<Props> = ({ openNavFunc, isOpen, isLogin, set
                 <VideoPlace 
                     mobileWidth={mobileWidth} 
                     minimum={minimum}
-                    bg='bg'
                 >
                     <ExploreTrends />
                 </VideoPlace>

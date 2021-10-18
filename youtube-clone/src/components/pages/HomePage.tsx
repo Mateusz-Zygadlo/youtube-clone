@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { GlobalStyle } from "../styles/GlobalStyle";
 import { Navbar } from '../Navbar';
 import { CategorySection } from '../CategorySection';
