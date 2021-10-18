@@ -8,7 +8,6 @@ interface Props{
 export const VideoPlace = styled.div<Props>`
     width: ${props => props.mobileWidth === true ? (props.minimum === true) ? '100%' : 'calc(100% - 85px)' : 'calc(100% - 240px)'};
     height: calc(100% - 56px);
-    background-color: yellow;
     position: relative;
     top: 56px;
     padding: 0;

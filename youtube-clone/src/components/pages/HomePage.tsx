@@ -86,8 +86,8 @@ export const HomePage: React.FC = () => {
                             <ShortText>
                                 <Avatar></Avatar>
                                 <DescriptionVideo>
-                                    <TitleVideo>this is title in youtube clone with github react typescript and styled components</TitleVideo>
-                                    <OwnerChannel>youtube channel</OwnerChannel>
+                                    <TitleVideo>This is title in youtube clone with github react typescript and styled components</TitleVideo>
+                                    <OwnerChannel>Youtube channel</OwnerChannel>
                                     <Statistic>
                                         <Views>3.4k views</Views>
                                         <Data>2 years ago</Data>

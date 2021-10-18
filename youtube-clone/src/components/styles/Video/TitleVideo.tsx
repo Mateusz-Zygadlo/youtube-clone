@@ -5,7 +5,7 @@ export const TitleVideo = styled.h1`
     height: 45px;
     overflow: hidden;
     font-weight: 100;
-    font-size: 20px;
+    font-size: 18px;
     display: flex;
     color: black;
     justify-content: flex-start;

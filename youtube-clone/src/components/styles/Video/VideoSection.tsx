@@ -5,7 +5,6 @@ export const VideoSection = styled.div`
     top: 56px;
     width: 1200px;
     height: 100%;
-    background-color: orange;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(auto-fill, 275px);
