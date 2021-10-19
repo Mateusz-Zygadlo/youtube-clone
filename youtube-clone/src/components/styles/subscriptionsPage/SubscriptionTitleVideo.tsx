@@ -5,6 +5,5 @@ export const SubscriptionTitleVideo = styled.h1`
     font-weight: 100;
     width: 100%;
     height: 40px;
-    background-color: purple;
     overflow: hidden;
 `;

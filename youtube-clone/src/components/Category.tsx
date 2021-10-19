@@ -37,8 +37,9 @@ export const Category: React.FC<Props> = ({ isLogin }) => {
                         </Link>
                     </CategoryCard>
                     <CategoryCard>
-                        <Icon className="material-icons">subscriptions</Icon>
-                        <Paragraph>Subscription</Paragraph>
+                        <Link to='subscriptions'>
+                            <Icon className="material-icons">subscriptions</Icon>
+                            <Paragraph>Subscription</Paragraph></Link>
                     </CategoryCard>
                 </Popular>
                 <UserSection>

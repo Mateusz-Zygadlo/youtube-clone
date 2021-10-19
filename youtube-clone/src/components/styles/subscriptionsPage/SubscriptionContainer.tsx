@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 export const SubscriptionContainer = styled.div`
     width: 1100px;
-    height: 3000px;
-    background-color: yellow;
+    height: auto;
     margin: 0 auto;
     padding-top: 20px;
 
