@@ -6,6 +6,8 @@ import { ExplorePage } from './pages/ExplorePage';
 import { SubscriptionsPage } from './pages/SubscriptionsPage';
 import { HistoryPage } from './pages/HistoryPage';
 import { LibraryPage } from './pages/LibraryPage';
+import { LikedPage } from './pages/LikedPage';
+import { WatchLaterPage } from './pages/WatchLaterPage';
  
 
 export const Routes: React.FC = () => {
@@ -115,6 +117,32 @@ export const Routes: React.FC = () => {
                     path='/library'
                     render={() => (
                         <LibraryPage
+                            openNavFunc={openNav}
+                            isOpen={isOpen}
+                            isLogin={isLogin}
+                            setMobileWidthFunc={setMobileWidthFunc}
+                            mobileWidth={mobileWidth}
+                            openNav={openNav}
+                            minimum={minimum} />
+                    )} />
+                <Route
+                    exact
+                    path='/liked'
+                    render={() => (
+                        <LikedPage
+                            openNavFunc={openNav}
+                            isOpen={isOpen}
+                            isLogin={isLogin}
+                            setMobileWidthFunc={setMobileWidthFunc}
+                            mobileWidth={mobileWidth}
+                            openNav={openNav}
+                            minimum={minimum} />
+                    )} />
+                    <Route
+                    exact
+                    path='/watchLater'
+                    render={() => (
+                        <WatchLaterPage
                             openNavFunc={openNav}
                             isOpen={isOpen}
                             isLogin={isLogin}

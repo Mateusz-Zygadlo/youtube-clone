@@ -58,12 +58,16 @@ export const Category: React.FC<Props> = ({ isLogin }) => {
                     {isLogin ? 
                         <>
                             <CategoryCard>
-                                <Icon className="material-icons">watch_later</Icon>
-                                <Paragraph>Watch later</Paragraph>
+                                <Link to='/watchLater'>
+                                    <Icon className="material-icons">watch_later</Icon>
+                                    <Paragraph>Watch later</Paragraph>
+                                </Link>
                             </CategoryCard>
                             <CategoryCard>
-                                <Icon className="material-icons">thumb_up</Icon>
-                                <Paragraph>Liked videos</Paragraph>
+                                <Link to='/liked'>
+                                    <Icon className="material-icons">thumb_up</Icon>
+                                    <Paragraph>Liked videos</Paragraph>
+                                </Link>
                             </CategoryCard>
                         </>
                     :       
