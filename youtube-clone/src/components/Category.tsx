@@ -44,12 +44,16 @@ export const Category: React.FC<Props> = ({ isLogin }) => {
                 </Popular>
                 <UserSection>
                     <CategoryCard>
-                        <Icon className="material-icons">video_library</Icon>
-                        <Paragraph>Library</Paragraph>
+                        <Link to="/library">
+                            <Icon className="material-icons">video_library</Icon>
+                            <Paragraph>Library</Paragraph>
+                        </Link>
                     </CategoryCard>
                     <CategoryCard>
-                        <Icon className="material-icons">history</Icon>
-                        <Paragraph>History</Paragraph>
+                        <Link to="/history">
+                            <Icon className="material-icons">history</Icon>
+                            <Paragraph>History</Paragraph>
+                        </Link>
                     </CategoryCard>
                     {isLogin ? 
                         <>

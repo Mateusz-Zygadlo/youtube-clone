@@ -4,6 +4,8 @@ import App from './App';
 import { HomePage } from './pages/HomePage';
 import { ExplorePage } from './pages/ExplorePage';
 import { SubscriptionsPage } from './pages/SubscriptionsPage';
+import { HistoryPage } from './pages/HistoryPage';
+import { LibraryPage } from './pages/LibraryPage';
  
 
 export const Routes: React.FC = () => {
@@ -87,6 +89,32 @@ export const Routes: React.FC = () => {
                     path='/subscriptions'
                     render={() => (
                         <SubscriptionsPage
+                            openNavFunc={openNav}
+                            isOpen={isOpen}
+                            isLogin={isLogin}
+                            setMobileWidthFunc={setMobileWidthFunc}
+                            mobileWidth={mobileWidth}
+                            openNav={openNav}
+                            minimum={minimum} />
+                    )} />
+                <Route
+                    exact
+                    path='/history'
+                    render={() => (
+                        <HistoryPage
+                            openNavFunc={openNav}
+                            isOpen={isOpen}
+                            isLogin={isLogin}
+                            setMobileWidthFunc={setMobileWidthFunc}
+                            mobileWidth={mobileWidth}
+                            openNav={openNav}
+                            minimum={minimum} />
+                    )} />
+                <Route
+                    exact
+                    path='/library'
+                    render={() => (
+                        <LibraryPage
                             openNavFunc={openNav}
                             isOpen={isOpen}
                             isLogin={isLogin}

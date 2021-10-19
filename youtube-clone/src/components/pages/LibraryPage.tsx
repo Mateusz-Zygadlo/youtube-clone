@@ -3,8 +3,8 @@ import { Navbar } from "../Navbar";
 import { MainContent } from "../styles/MainContent";
 import { CategorySection } from "../CategorySection";
 import { VideoPlace } from "../styles/VideoPlace";
-import { SubscriptionSection } from "../SubscriptionSection";
-  
+import { LibrarySection } from "../LibrarySection";
+
 interface Props{
     openNavFunc(props: boolean): void;
     isOpen: boolean;
@@ -15,7 +15,7 @@ interface Props{
     minimum: boolean;
 }
 
-export const SubscriptionsPage: React.FC<Props> = ({ openNavFunc, isOpen, isLogin, setMobileWidthFunc, mobileWidth, openNav, minimum }) => {
+export const LibraryPage: React.FC<Props>= ({ openNavFunc, isOpen, isLogin, setMobileWidthFunc, mobileWidth, openNav, minimum }) => {
     return(
         <>
             <GlobalStyle />
@@ -34,7 +34,7 @@ export const SubscriptionsPage: React.FC<Props> = ({ openNavFunc, isOpen, isLogi
                     mobileWidth={mobileWidth} 
                     minimum={minimum}
                 >
-                    <SubscriptionSection />
+                    <LibrarySection />
                 </VideoPlace>
             </MainContent>
         </>
