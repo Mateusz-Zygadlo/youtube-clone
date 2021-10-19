@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import App from './App';
 import { HomePage } from './pages/HomePage';
 import { ExplorePage } from './pages/ExplorePage';
+import { SubscriptionsPage } from './pages/SubscriptionsPage';
  
 
 export const Routes: React.FC = () => {
@@ -81,6 +82,19 @@ export const Routes: React.FC = () => {
                             openNav={openNav}
                             minimum={minimum}  />
                     )}  />
+                <Route
+                    exact
+                    path='/subscriptions'
+                    render={() => (
+                        <SubscriptionsPage
+                            openNavFunc={openNav}
+                            isOpen={isOpen}
+                            isLogin={isLogin}
+                            setMobileWidthFunc={setMobileWidthFunc}
+                            mobileWidth={mobileWidth}
+                            openNav={openNav}
+                            minimum={minimum} />
+                    )} />
             </Switch>
         </BrowserRouter>
     )
