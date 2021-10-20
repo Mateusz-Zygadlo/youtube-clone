@@ -83,24 +83,6 @@ export const Category: React.FC<Props> = ({ isLogin }) => {
                             </UserAvatar>
                             <UserNickname>test one</UserNickname>
                         </SubscriptionCard>
-                        <SubscriptionCard>
-                            <UserAvatar>
-                                <AvatarImage />
-                            </UserAvatar>
-                            <UserNickname>test two</UserNickname>
-                        </SubscriptionCard>
-                        <SubscriptionCard>
-                            <UserAvatar>
-                                <AvatarImage />
-                            </UserAvatar>
-                            <UserNickname>test three</UserNickname>
-                        </SubscriptionCard>
-                        <SubscriptionCard>
-                            <UserAvatar>
-                                <AvatarImage />
-                            </UserAvatar>
-                            <UserNickname>test four</UserNickname>
-                        </SubscriptionCard>
                     </SubscriptionSection>
                 :
                     <LoginSection>

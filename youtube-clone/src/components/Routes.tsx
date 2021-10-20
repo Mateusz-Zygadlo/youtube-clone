@@ -8,6 +8,7 @@ import { HistoryPage } from './pages/HistoryPage';
 import { LibraryPage } from './pages/LibraryPage';
 import { LikedPage } from './pages/LikedPage';
 import { WatchLaterPage } from './pages/WatchLaterPage';
+import { ChannelPage } from './pages/ChannelPage';
  
 
 export const Routes: React.FC = () => {
@@ -138,11 +139,24 @@ export const Routes: React.FC = () => {
                             openNav={openNav}
                             minimum={minimum} />
                     )} />
-                    <Route
+                <Route
                     exact
                     path='/watchLater'
                     render={() => (
                         <WatchLaterPage
+                            openNavFunc={openNav}
+                            isOpen={isOpen}
+                            isLogin={isLogin}
+                            setMobileWidthFunc={setMobileWidthFunc}
+                            mobileWidth={mobileWidth}
+                            openNav={openNav}
+                            minimum={minimum} />
+                    )} />
+                <Route
+                    exact
+                    path='/channel'
+                    render={() => (
+                        <ChannelPage
                             openNavFunc={openNav}
                             isOpen={isOpen}
                             isLogin={isLogin}
