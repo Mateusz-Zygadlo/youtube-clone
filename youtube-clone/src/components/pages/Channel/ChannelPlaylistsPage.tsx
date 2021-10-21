@@ -4,7 +4,7 @@ import { MainContent } from "../../styles/MainContent";
 import { CategorySection } from "../../CategorySection";
 import { VideoPlace } from "../../styles/VideoPlace";
 import { ChannelDescriptionSection } from "../../ChannelDescriptionSection";
-import { ChannelVideos } from "../../ChannelVideos";
+import { ChannelPlaylists } from "../../ChannelPlaylists";
  
 interface Props{
     openNavFunc(props: boolean): void;
@@ -16,7 +16,7 @@ interface Props{
     minimum: boolean;
 }
 
-export const ChannelVideoPage: React.FC<Props> = ({ openNavFunc, isOpen, isLogin, setMobileWidthFunc, mobileWidth, openNav, minimum }) => {
+export const ChannelPlaylistsPage: React.FC<Props> = ({ openNavFunc, isOpen, isLogin, setMobileWidthFunc, mobileWidth, openNav, minimum }) => {
     return(
         <>
             <GlobalStyle />
@@ -36,7 +36,7 @@ export const ChannelVideoPage: React.FC<Props> = ({ openNavFunc, isOpen, isLogin
                     minimum={minimum}
                 >
                     <ChannelDescriptionSection />
-                    <ChannelVideos />
+                    <ChannelPlaylists />
                 </VideoPlace>
             </MainContent>
         </>

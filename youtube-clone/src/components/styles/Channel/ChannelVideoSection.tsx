@@ -1,10 +1,6 @@
 import styled from "styled-components";
 
-interface Props{
-    noBorder?: string;
-}
-
-export const ChannelVideoContainer = styled.div<Props>`
+export const ChannelVideoSection = styled.div`
     height: auto;
     width: 1070px;
     display: flex;
@@ -12,7 +8,6 @@ export const ChannelVideoContainer = styled.div<Props>`
     align-items: flex-start;
     margin: 10px auto 10px auto;
     padding-bottom: 20px;
-    border-bottom: ${props => props.noBorder ? null : '1px solid black'};
 
     @media (max-width: 1320px){
         width: 900px;

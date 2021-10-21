@@ -1,19 +1,19 @@
-import { ChannelStatsInfo } from "./styles/Channel/ChannelStatsInfo";
-import { VideoViews } from "./styles/Channel/VideoViews";
-import { VideoDate } from "./styles/Channel/VideoDate";
-import { ChannelVideoContainer } from "./styles/Channel/ChannelVideoContainer";
+import { ChannelVideoSection } from "./styles/Channel/ChannelVideoSection";
 import { ChannelVideoParagraph } from "./styles/Channel/ChannelVideoParagraph";
-import { ChannelHomeVideoSection } from "./styles/Channel/ChannelHomeVideoSection";
+import { ChannelVideoSpace } from "./styles/Channel/ChannelVideoSpace";
 import { ChannelHomeVideo } from "./styles/Channel/ChannelHomeVideo";
 import { ChannelHomeVideoBackground } from "./styles/Channel/ChannelHomeVIdeoBackground";
 import { ChannelHomeVideoTitle } from "./styles/Channel/ChannelHomeVideoTitle";
+import { ChannelStatsInfo } from "./styles/Channel/ChannelStatsInfo";
+import { VideoViews } from "./styles/Channel/VideoViews";
+import { VideoDate } from "./styles/Channel/VideoDate";
 
-export const ChannelPopularUploadsSection = () => {
+export const ChannelVideos = () => {
     return(
-        <ChannelVideoContainer noBorder='noBorder'>
-            <ChannelVideoParagraph>Popular uploads</ChannelVideoParagraph>
-            <ChannelHomeVideoSection>
-                <ChannelHomeVideo>
+        <ChannelVideoSection>
+            <ChannelVideoParagraph>Uploads</ChannelVideoParagraph>
+            <ChannelVideoSpace>
+            <ChannelHomeVideo>
                     <ChannelHomeVideoBackground></ChannelHomeVideoBackground>
                     <ChannelHomeVideoTitle>This is a title</ChannelHomeVideoTitle>
                     <ChannelStatsInfo>
@@ -21,7 +21,7 @@ export const ChannelPopularUploadsSection = () => {
                         <VideoDate>2 days ago</VideoDate>
                     </ChannelStatsInfo>
                 </ChannelHomeVideo>
-            </ChannelHomeVideoSection>
-        </ChannelVideoContainer>
+            </ChannelVideoSpace>
+        </ChannelVideoSection>
     );
 }

@@ -9,6 +9,9 @@ import { LibraryPage } from './pages/LibraryPage';
 import { LikedPage } from './pages/LikedPage';
 import { WatchLaterPage } from './pages/WatchLaterPage';
 import { ChannelHomePage } from './pages/Channel/ChannelHomePage';
+import { ChannelVideoPage } from './pages/Channel/ChannelVideoPage';
+import { ChannelPlaylistsPage } from './pages/Channel/ChannelPlaylistsPage';
+import { ChannelPlaylistsNowPage } from './pages/Channel/ChannelPlaylistsNowPage';
  
 
 export const Routes: React.FC = () => {
@@ -170,6 +173,45 @@ export const Routes: React.FC = () => {
                             </>
                         )
                     }} />
+                <Route
+                    exact
+                    path='/channel/videos'
+                    render={() => (
+                        <ChannelVideoPage
+                            openNavFunc={openNav}
+                            isOpen={isOpen}
+                            isLogin={isLogin}
+                            setMobileWidthFunc={setMobileWidthFunc}
+                            mobileWidth={mobileWidth}
+                            openNav={openNav}
+                            minimum={minimum} />
+                    )} />
+                <Route
+                    exact
+                    path='/channel/playlists'
+                    render={() => (
+                        <ChannelPlaylistsPage
+                            openNavFunc={openNav}
+                            isOpen={isOpen}
+                            isLogin={isLogin}
+                            setMobileWidthFunc={setMobileWidthFunc}
+                            mobileWidth={mobileWidth}
+                            openNav={openNav}
+                            minimum={minimum} />
+                    )} />
+                <Route
+                    exact
+                    path='/channel/playlists/one'
+                    render={() => (
+                        <ChannelPlaylistsNowPage
+                            openNavFunc={openNav}
+                            isOpen={isOpen}
+                            isLogin={isLogin}
+                            setMobileWidthFunc={setMobileWidthFunc}
+                            mobileWidth={mobileWidth}
+                            openNav={openNav}
+                            minimum={minimum} />
+                    )} />
             </Switch>
         </BrowserRouter>
     )
