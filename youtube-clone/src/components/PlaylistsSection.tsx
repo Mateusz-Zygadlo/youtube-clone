@@ -15,7 +15,7 @@ export const PlaylistsSection = () => {
         <LikedContainer>
             <FirstVideo>
                 <LikedVideoBackgroundFirst></LikedVideoBackgroundFirst>
-                <LikedTitleVideoFirst>Liked</LikedTitleVideoFirst>
+                <LikedTitleVideoFirst>One</LikedTitleVideoFirst>
                 <LikedVideoNumber>154 videos</LikedVideoNumber>
             </FirstVideo>
             <LikedVideoSection>

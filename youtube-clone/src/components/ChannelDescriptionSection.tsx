@@ -31,10 +31,8 @@ export const ChannelDescriptionSection = () => {
                     <Name>Home</Name>
                     <Name>Videos</Name>
                     <Name>Playlists</Name>
-                    <Name>Community</Name>
                     <Name>Channels</Name>
                     <Name>About</Name>
-                    <Icon className="material-icons">search</Icon>
                 </ChannelCategoryName>
             </ChannelCategoryBar>
         </ChannelDescription>

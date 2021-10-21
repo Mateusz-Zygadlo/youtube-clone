@@ -1,4 +1,4 @@
-import { ChannelVideoSection } from "./styles/Channel/ChannelVideoSection";
+import { ChannelChannelsContainer } from "./styles/Channel/ChannelChannelsContainer";
 import { ChannelVideoParagraph } from "./styles/Channel/ChannelVideoParagraph";
 import { ChannelVideoSpace } from "./styles/Channel/ChannelVideoSpace";
 import { ChannelHomeVideo } from "./styles/Channel/ChannelHomeVideo";
@@ -10,7 +10,7 @@ import { VideoDate } from "./styles/Channel/VideoDate";
 
 export const ChannelVideos = () => {
     return(
-        <ChannelVideoSection>
+        <ChannelChannelsContainer>
             <ChannelVideoParagraph>Uploads</ChannelVideoParagraph>
             <ChannelVideoSpace>
             <ChannelHomeVideo>
@@ -22,6 +22,6 @@ export const ChannelVideos = () => {
                     </ChannelStatsInfo>
                 </ChannelHomeVideo>
             </ChannelVideoSpace>
-        </ChannelVideoSection>
+        </ChannelChannelsContainer>
     );
 }
