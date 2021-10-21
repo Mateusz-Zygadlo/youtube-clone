@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
-export const ChannelMainSection = styled.div`
-    height: 80px;
+export const ChannelPinnedVideo = styled.div`
+    height: auto;
     width: 1070px;
-    margin: 16px auto 0 auto;
+    background-color: aqua;
     display: flex;
-    justify-content: space-between;
+    margin: 20px auto 0 auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
 
     @media (max-width: 1320px){
         width: 900px;
@@ -25,5 +27,4 @@ export const ChannelMainSection = styled.div`
     @media (max-width: 520px){
         width: 450px;
     }
-
 `;

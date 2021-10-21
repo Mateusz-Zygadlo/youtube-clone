@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
-export const ChannelMainSection = styled.div`
-    height: 80px;
+export const ChannelCategoryBar = styled.div`
+    height: 47px;
     width: 1070px;
-    margin: 16px auto 0 auto;
+    background-color: brown;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
 
@@ -25,5 +26,4 @@ export const ChannelMainSection = styled.div`
     @media (max-width: 520px){
         width: 450px;
     }
-
 `;

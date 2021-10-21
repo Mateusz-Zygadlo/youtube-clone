@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export const ChannelImage = styled.div`
-    height: 208px;
+export const ChannelHomeVideoBackground = styled.img`
     width: 100%;
+    height: 110px;
     background-color: pink;
-`;
+`
