@@ -77,12 +77,14 @@ export const Category: React.FC<Props> = ({ isLogin }) => {
                 {isLogin ? 
                     <SubscriptionSection>
                         <Paragraph subs="subs">Subscriptions</Paragraph>
-                        <SubscriptionCard>
-                            <UserAvatar>
-                                <AvatarImage />
-                            </UserAvatar>
-                            <UserNickname>test one</UserNickname>
-                        </SubscriptionCard>
+                        <NavLink to='/channel/home' activeClassName='nowPage'>
+                            <SubscriptionCard>
+                                <UserAvatar>
+                                    <AvatarImage />
+                                </UserAvatar>
+                                <UserNickname>test one</UserNickname>
+                            </SubscriptionCard>
+                        </NavLink>
                     </SubscriptionSection>
                 :
                     <LoginSection>

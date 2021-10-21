@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-export const ChannelMainSection = styled.div`
+export const ChannelAboutContainer = styled.div`
     height: auto;
     width: 1070px;
-    margin: 16px auto 0 auto;
+    margin: 16px auto 10px auto;
     display: flex;
     justify-content: space-between;
 
@@ -25,5 +25,4 @@ export const ChannelMainSection = styled.div`
     @media (max-width: 520px){
         width: 450px;
     }
-
 `;

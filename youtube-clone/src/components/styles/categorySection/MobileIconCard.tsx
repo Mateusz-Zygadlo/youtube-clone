@@ -8,4 +8,8 @@ export const MobileIconCard = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    .nowPage{
+        color: red;
+    }
 `;

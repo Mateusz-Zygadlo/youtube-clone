@@ -2,26 +2,35 @@ import { MobileCategoryContainer } from './styles/categorySection/MobileCategory
 import { MobileIconCard } from './styles/categorySection/MobileIconCard';
 import { Icon } from './styles/navbar/Icon';
 import { Paragraph } from './styles/categorySection/Paragraph';
+import { NavLink } from 'react-router-dom';
 
 export const MobileCategory = () => {
     return(
         <>
             <MobileCategoryContainer>
                 <MobileIconCard>
-                    <Icon className="material-icons">home</Icon>
-                    <Paragraph mobile='mobile'>Home</Paragraph>
+                    <NavLink to="/home" activeClassName='nowPage'>
+                        <Icon mobile='mobile' className="material-icons">home</Icon>
+                        <Paragraph mobile='mobile'>Home</Paragraph>
+                    </NavLink>
                 </MobileIconCard>
                 <MobileIconCard>
-                    <Icon className="material-icons">explore</Icon>
-                    <Paragraph mobile='mobile'>Explore</Paragraph>
+                    <NavLink to="/explore" activeClassName='nowPage'>
+                        <Icon mobile='mobile' className="material-icons">explore</Icon>
+                        <Paragraph mobile='mobile'>Explore</Paragraph>
+                    </NavLink>
                 </MobileIconCard>
                 <MobileIconCard>
-                    <Icon className="material-icons">subscriptions</Icon>
-                    <Paragraph mobile='mobile'>Subscription</Paragraph>
+                    <NavLink to="/subscriptions" activeClassName='nowPage'>
+                        <Icon mobile='mobile' className="material-icons">subscriptions</Icon>
+                        <Paragraph mobile='mobile'>Subscription</Paragraph>
+                    </NavLink>
                 </MobileIconCard>
                 <MobileIconCard>
-                    <Icon className="material-icons">video_library</Icon>
-                    <Paragraph mobile='mobile'>Library</Paragraph>
+                    <NavLink to="/library" activeClassName='nowPage'>
+                        <Icon mobile='mobile' className="material-icons">video_library</Icon>
+                        <Paragraph mobile='mobile'>Library</Paragraph>
+                    </NavLink>
                 </MobileIconCard>
             </MobileCategoryContainer>
         </>

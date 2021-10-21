@@ -6,4 +6,8 @@ export const ChannelCategoryName = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    .active{
+        border-bottom: 1px solid black;
+    }
 `;

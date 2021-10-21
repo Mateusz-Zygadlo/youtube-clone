@@ -10,6 +10,6 @@ export const CategoryContainer = styled.div`
     z-index: 1000;
 
     .nowPage{
-        color: green;
+        color: red;
     }
 `;

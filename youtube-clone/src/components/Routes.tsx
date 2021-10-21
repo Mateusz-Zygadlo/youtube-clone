@@ -13,6 +13,7 @@ import { ChannelVideoPage } from './pages/Channel/ChannelVideoPage';
 import { ChannelPlaylistsPage } from './pages/Channel/ChannelPlaylistsPage';
 import { ChannelPlaylistsNowPage } from './pages/Channel/ChannelPlaylistsNowPage';
 import { ChannelChannelsPage } from './pages/Channel/ChannelChannelsPage';
+import { ChannelAboutPage } from './pages/Channel/ChannelAboutPage';
  
 
 export const Routes: React.FC = () => {
@@ -218,6 +219,19 @@ export const Routes: React.FC = () => {
                     path='/channel/channels'
                     render={() => (
                         <ChannelChannelsPage
+                            openNavFunc={openNav}
+                            isOpen={isOpen}
+                            isLogin={isLogin}
+                            setMobileWidthFunc={setMobileWidthFunc}
+                            mobileWidth={mobileWidth}
+                            openNav={openNav}
+                            minimum={minimum} />
+                    )} />
+                <Route
+                    exact
+                    path='/channel/about'
+                    render={() => (
+                        <ChannelAboutPage
                             openNavFunc={openNav}
                             isOpen={isOpen}
                             isLogin={isLogin}
