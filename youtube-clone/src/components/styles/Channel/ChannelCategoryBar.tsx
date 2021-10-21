@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const ChannelCategoryBar = styled.div`
     height: 47px;
     width: 1070px;
-    background-color: brown;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;

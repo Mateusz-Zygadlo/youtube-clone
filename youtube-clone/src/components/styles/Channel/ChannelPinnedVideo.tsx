@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const ChannelPinnedVideo = styled.div`
     height: auto;
     width: 1070px;
-    background-color: aqua;
     display: flex;
     margin: 20px auto 0 auto;
     padding-bottom: 20px;
