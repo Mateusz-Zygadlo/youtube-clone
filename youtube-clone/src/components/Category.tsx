@@ -13,7 +13,7 @@ import { UserAvatar } from './styles/categorySection/UserAvatar';
 import { UserNickname } from './styles/categorySection/UserNickname';
 import { AvatarImage } from './styles/categorySection/AvatarImage';
 import { MoreCategory } from './styles/categorySection/MoreCategory';
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 interface Props{
     isLogin: boolean;
@@ -25,49 +25,49 @@ export const Category: React.FC<Props> = ({ isLogin }) => {
             <CategoryContainer>
                 <Popular>
                     <CategoryCard>
-                        <Link to='/home'>
+                        <NavLink to='/home' activeClassName='nowPage'>
                             <Icon className="material-icons">home</Icon>
                             <Paragraph>Home</Paragraph>
-                        </Link>
+                        </NavLink>
                     </CategoryCard>
                     <CategoryCard>
-                        <Link to='explore'>
+                        <NavLink to='/explore' activeClassName='nowPage'>
                             <Icon className="material-icons">explore</Icon>
                             <Paragraph>Explore</Paragraph>
-                        </Link>
+                        </NavLink>
                     </CategoryCard>
                     <CategoryCard>
-                        <Link to='subscriptions'>
+                        <NavLink to='/subscriptions' activeClassName='nowPage'>
                             <Icon className="material-icons">subscriptions</Icon>
-                            <Paragraph>Subscription</Paragraph></Link>
+                            <Paragraph>Subscription</Paragraph></NavLink>
                     </CategoryCard>
                 </Popular>
                 <UserSection>
                     <CategoryCard>
-                        <Link to="/library">
+                        <NavLink to="/library" activeClassName='nowPage'>
                             <Icon className="material-icons">video_library</Icon>
                             <Paragraph>Library</Paragraph>
-                        </Link>
+                        </NavLink>
                     </CategoryCard>
                     <CategoryCard>
-                        <Link to="/history">
+                        <NavLink to="/history" activeClassName='nowPage'>
                             <Icon className="material-icons">history</Icon>
                             <Paragraph>History</Paragraph>
-                        </Link>
+                        </NavLink>
                     </CategoryCard>
                     {isLogin ? 
                         <>
                             <CategoryCard>
-                                <Link to='/watchLater'>
+                                <NavLink to='/watchLater' activeClassName='nowPage'>
                                     <Icon className="material-icons">watch_later</Icon>
                                     <Paragraph>Watch later</Paragraph>
-                                </Link>
+                                </NavLink>
                             </CategoryCard>
                             <CategoryCard>
-                                <Link to='/liked'>
+                                <NavLink to='/liked' activeClassName='nowPage'>
                                     <Icon className="material-icons">thumb_up</Icon>
                                     <Paragraph>Liked videos</Paragraph>
-                                </Link>
+                                </NavLink>
                             </CategoryCard>
                         </>
                     :       

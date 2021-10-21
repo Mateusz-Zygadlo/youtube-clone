@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import App from './App';
 import { HomePage } from './pages/HomePage';
 import { ExplorePage } from './pages/ExplorePage';
@@ -8,7 +8,7 @@ import { HistoryPage } from './pages/HistoryPage';
 import { LibraryPage } from './pages/LibraryPage';
 import { LikedPage } from './pages/LikedPage';
 import { WatchLaterPage } from './pages/WatchLaterPage';
-import { ChannelPage } from './pages/ChannelPage';
+import { ChannelHomePage } from './pages/Channel/ChannelHomePage';
  
 
 export const Routes: React.FC = () => {
@@ -154,17 +154,22 @@ export const Routes: React.FC = () => {
                     )} />
                 <Route
                     exact
-                    path='/channel'
-                    render={() => (
-                        <ChannelPage
-                            openNavFunc={openNav}
-                            isOpen={isOpen}
-                            isLogin={isLogin}
-                            setMobileWidthFunc={setMobileWidthFunc}
-                            mobileWidth={mobileWidth}
-                            openNav={openNav}
-                            minimum={minimum} />
-                    )} />
+                    path={['/channel', '/channel/home']}
+                    render={() => {
+                        return(
+                            <>
+                                <Redirect from='/channel' to='/channel/home' />
+                                <ChannelHomePage
+                                    openNavFunc={openNav}
+                                    isOpen={isOpen}
+                                    isLogin={isLogin}
+                                    setMobileWidthFunc={setMobileWidthFunc}
+                                    mobileWidth={mobileWidth}
+                                    openNav={openNav}
+                                    minimum={minimum} />
+                            </>
+                        )
+                    }} />
             </Switch>
         </BrowserRouter>
     )
