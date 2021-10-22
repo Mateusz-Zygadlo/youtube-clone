@@ -19,6 +19,8 @@ import { TrendingGamingPage } from './pages/Explore/TrendingGamingPage';
 import { TrendingMoviesPage } from './pages/Explore/TrendingMoviesPage';
 import { MusicHomePage } from './pages/Explore/MusicHomePage';
 import { MusicAboutPage } from './pages/Explore/MusicAboutPage';
+import { MoviesBrowsePage } from './pages/Explore/MoviesBrowsePage';
+import { MoviesPurchasedPage } from './pages/Explore/MoviePurchasedPage';
  
 interface Props{
     openNavFunc(props: boolean): void;
@@ -116,8 +118,21 @@ export const Routes: React.FC<Props> = (props) => {
                     path='/explore/music/about'
                     render={()=>(<MusicAboutPage {...props} />)} />
 
-
-
+                <Route
+                    exact
+                    path={['/explore/movies', '/explore/movies/browse']}
+                    render={() => {
+                        return(
+                            <>
+                                <Redirect from='/explore/music' to='/explore/movies/browse' />
+                                <MoviesBrowsePage {...props} />
+                            </>
+                        )
+                    }} />
+                <Route
+                    exact
+                    path='/explore/movies/purchased'
+                    render={()=>(<MoviesPurchasedPage {...props} />)} />
 
                 <Route
                     exact
