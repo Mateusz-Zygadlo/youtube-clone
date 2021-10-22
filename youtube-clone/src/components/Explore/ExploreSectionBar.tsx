@@ -1,15 +1,18 @@
-import { ExploreSection } from './styles/explore/ExploreSection';
-import { ExploreCategoryCard } from './styles/explore/ExploreCategoryCard';
-import { Icon } from './styles/navbar/Icon';
-import { Paragraph } from './styles/navbar/Paragraph';
+import { ExploreSection } from '../styles/explore/ExploreSection';
+import { ExploreCategoryCard } from '../styles/explore/ExploreCategoryCard';
+import { Icon } from '../styles/navbar/Icon';
+import { Paragraph } from '../styles/navbar/Paragraph';
+import { Link } from 'react-router-dom';
 
 export const ExploreSectionBar = () => {
     return(
         <ExploreSection>
-            <ExploreCategoryCard>
-                <Icon className="material-icons">trending_up</Icon>
-                <Paragraph>Trending</Paragraph>
-            </ExploreCategoryCard>
+            <Link to='/explore/trending/now'>
+                <ExploreCategoryCard>
+                    <Icon className="material-icons">trending_up</Icon>
+                    <Paragraph>Trending</Paragraph>
+                </ExploreCategoryCard>
+            </Link>
             <ExploreCategoryCard>
                 <Icon className="material-icons">volume_up</Icon>
                 <Paragraph>Music</Paragraph>

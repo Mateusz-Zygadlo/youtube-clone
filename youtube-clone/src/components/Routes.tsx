@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import App from './App';
 import { HomePage } from './pages/HomePage';
@@ -14,6 +13,10 @@ import { ChannelPlaylistsPage } from './pages/Channel/ChannelPlaylistsPage';
 import { ChannelPlaylistsNowPage } from './pages/Channel/ChannelPlaylistsNowPage';
 import { ChannelChannelsPage } from './pages/Channel/ChannelChannelsPage';
 import { ChannelAboutPage } from './pages/Channel/ChannelAboutPage';
+import { TrendingNowPage } from './pages/Explore/TrendingNowPage';
+import { TrendingMusicPage } from './pages/Explore/TrendingMusicPage';
+import { TrendingGamingPage } from './pages/Explore/TrendingGamingPage';
+import { TrendingMoviesPage } from './pages/Explore/TrendingMoviesPage';
  
 interface Props{
     openNavFunc(props: boolean): void;
@@ -41,6 +44,29 @@ export const Routes: React.FC<Props> = (props) => {
                     exact
                     path='/explore'
                     render={()=>(<ExplorePage {...props} />)} />
+                <Route
+                    exact
+                    path={['/explore/trending', '/explore/trending/now']}
+                    render={() => {
+                        return(
+                            <>
+                                <Redirect from='/explore/trending' to='/explore/trending/now' />
+                                <TrendingNowPage {...props} />
+                            </>
+                        )
+                    }} />
+                <Route
+                    exact
+                    path='/explore/trending/music'
+                    render={()=>(<TrendingMusicPage {...props} />)} />
+                <Route
+                    exact
+                    path='/explore/trending/gaming'
+                    render={()=>(<TrendingGamingPage {...props} />)} />
+                <Route
+                    exact
+                    path='/explore/trending/movies'
+                    render={()=>(<TrendingMoviesPage {...props} />)} />
                 <Route
                     exact
                     path='/subscriptions'

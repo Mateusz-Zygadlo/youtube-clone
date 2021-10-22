@@ -3,7 +3,9 @@ import { CategorySection } from "../../CategorySection";
 import { MainContent } from "../../styles/MainContent";
 import { GlobalStyle } from '../../styles/GlobalStyle';
 import { VideoPlace } from '../../styles/VideoPlace';
-import { ExploreTrends } from '../../Explore/ExploreTrends';
+import { ExploreVideos } from '../../Explore/ExploreVideo';
+import { ExploreContainer } from '../../styles/explore/ExploreContainer';
+import { ExploreTrendingNavbar } from '../../Explore/ExploreTrendingNavbar'
 
 interface Props{
     openNavFunc(props: boolean): void;
@@ -15,7 +17,7 @@ interface Props{
     minimum: boolean;
 }
 
-export const ExplorePage: React.FC<Props> = ({ openNavFunc, isOpen, isLogin, setMobileWidthFunc, mobileWidth, openNav, minimum }) => {
+export const TrendingMusicPage: React.FC<Props> = ({ openNavFunc, isOpen, isLogin, setMobileWidthFunc, mobileWidth, openNav, minimum }) => {
     return(
         <>
             <GlobalStyle />
@@ -34,7 +36,10 @@ export const ExplorePage: React.FC<Props> = ({ openNavFunc, isOpen, isLogin, set
                     mobileWidth={mobileWidth} 
                     minimum={minimum}
                 >
-                    <ExploreTrends />
+                    <ExploreContainer>
+                        <ExploreTrendingNavbar />
+                        <ExploreVideos />
+                    </ExploreContainer>
                 </VideoPlace>
             </MainContent>
         </>
