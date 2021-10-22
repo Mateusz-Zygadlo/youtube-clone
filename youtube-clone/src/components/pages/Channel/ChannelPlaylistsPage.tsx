@@ -3,8 +3,8 @@ import { Navbar } from "../../Navbar";
 import { MainContent } from "../../styles/MainContent";
 import { CategorySection } from "../../CategorySection";
 import { VideoPlace } from "../../styles/VideoPlace";
-import { ChannelDescriptionSection } from "../../ChannelDescriptionSection";
-import { ChannelPlaylists } from "../../ChannelPlaylists";
+import { ChannelDescriptionSection } from "../../Channel/ChannelDescriptionSection";
+import { ChannelPlaylists } from "../../Channel/ChannelPlaylists";
  
 interface Props{
     openNavFunc(props: boolean): void;

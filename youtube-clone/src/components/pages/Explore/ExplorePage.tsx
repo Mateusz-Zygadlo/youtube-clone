@@ -1,9 +1,9 @@
-import { Navbar } from "../Navbar";
-import { CategorySection } from "../CategorySection";
-import { MainContent } from "../styles/MainContent";
-import { GlobalStyle } from '../styles/GlobalStyle';
-import { VideoPlace } from '../styles/VideoPlace';
-import { ExploreTrends } from '../ExploreTrends';
+import { Navbar } from "../../Navbar";
+import { CategorySection } from "../../CategorySection";
+import { MainContent } from "../../styles/MainContent";
+import { GlobalStyle } from '../../styles/GlobalStyle';
+import { VideoPlace } from '../../styles/VideoPlace';
+import { ExploreTrends } from '../../ExploreTrends';
 
 interface Props{
     openNavFunc(props: boolean): void;

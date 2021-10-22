@@ -58,8 +58,6 @@ export const Navbar: React.FC<Props> = ({ openNavFunc, isOpen, isLogin, setMobil
 
         window.addEventListener('resize', resizeFunc);
 
-        console.log('click');
-
         return () => {
             window.removeEventListener('resize', resizeFunc);
         }

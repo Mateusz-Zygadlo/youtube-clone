@@ -1,8 +1,8 @@
-import { ChannelAboutContainer } from "./styles/Channel/ChannelAboutContainer";
-import { ChannelAboutDescription } from "./styles/Channel/ChannelAboutDescription";
-import { ChannelVideoParagraph } from "./styles/Channel/ChannelVideoParagraph";
-import { ChannelAboutText } from "./styles/Channel/ChannelAboutText";
-import { ChannelAboutStats } from "./styles/Channel/ChannelAboutStats";
+import { ChannelAboutContainer } from "../styles/Channel/ChannelAboutContainer";
+import { ChannelAboutDescription } from "../styles/Channel/ChannelAboutDescription";
+import { ChannelVideoParagraph } from "../styles/Channel/ChannelVideoParagraph";
+import { ChannelAboutText } from "../styles/Channel/ChannelAboutText";
+import { ChannelAboutStats } from "../styles/Channel/ChannelAboutStats";
 
 export const ChannelAboutSection = () => {
     return(

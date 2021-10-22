@@ -3,10 +3,10 @@ import { Navbar } from "../../Navbar";
 import { MainContent } from "../../styles/MainContent";
 import { CategorySection } from "../../CategorySection";
 import { VideoPlace } from "../../styles/VideoPlace";
-import { ChannelDescriptionSection } from "../../ChannelDescriptionSection";
-import { ChannelPinnedVideoSection } from "../../ChannelPinnedVideoSection";
-import { ChannelUploadsSection } from "../../ChannelUploadsSection";
-import { ChannelPopularUploadsSection } from "../../ChannelPopularUploadsSection";
+import { ChannelDescriptionSection } from "../../Channel/ChannelDescriptionSection";
+import { ChannelPinnedVideoSection } from "../../Channel/ChannelPinnedVideoSection";
+import { ChannelUploadsSection } from "../../Channel/ChannelUploadsSection";
+import { ChannelPopularUploadsSection } from "../../Channel/ChannelPopularUploadsSection";
  
 interface Props{
     openNavFunc(props: boolean): void;

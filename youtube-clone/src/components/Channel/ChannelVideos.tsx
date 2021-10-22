@@ -1,12 +1,12 @@
-import { ChannelChannelsContainer } from "./styles/Channel/ChannelChannelsContainer";
-import { ChannelVideoParagraph } from "./styles/Channel/ChannelVideoParagraph";
-import { ChannelVideoSpace } from "./styles/Channel/ChannelVideoSpace";
-import { ChannelHomeVideo } from "./styles/Channel/ChannelHomeVideo";
-import { ChannelHomeVideoBackground } from "./styles/Channel/ChannelHomeVIdeoBackground";
-import { ChannelHomeVideoTitle } from "./styles/Channel/ChannelHomeVideoTitle";
-import { ChannelStatsInfo } from "./styles/Channel/ChannelStatsInfo";
-import { VideoViews } from "./styles/Channel/VideoViews";
-import { VideoDate } from "./styles/Channel/VideoDate";
+import { ChannelChannelsContainer } from "../styles/Channel/ChannelChannelsContainer";
+import { ChannelVideoParagraph } from "../styles/Channel/ChannelVideoParagraph";
+import { ChannelVideoSpace } from "../styles/Channel/ChannelVideoSpace";
+import { ChannelHomeVideo } from "../styles/Channel/ChannelHomeVideo";
+import { ChannelHomeVideoBackground } from "../styles/Channel/ChannelHomeVIdeoBackground";
+import { ChannelHomeVideoTitle } from "../styles/Channel/ChannelHomeVideoTitle";
+import { ChannelStatsInfo } from "../styles/Channel/ChannelStatsInfo";
+import { VideoViews } from "../styles/Channel/VideoViews";
+import { VideoDate } from "../styles/Channel/VideoDate";
 
 export const ChannelVideos = () => {
     return(

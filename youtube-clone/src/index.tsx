@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Routes } from './components/Routes';
+import { SameProps } from './components/SameProps';
 import reportWebVitals from './reportWebVitals';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <Routes />
+    <SameProps />
   </React.StrictMode>,
   document.getElementById('root')
 );
