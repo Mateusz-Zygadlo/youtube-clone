@@ -21,6 +21,8 @@ import { MusicHomePage } from './pages/Explore/MusicHomePage';
 import { MusicAboutPage } from './pages/Explore/MusicAboutPage';
 import { MoviesBrowsePage } from './pages/Explore/MoviesBrowsePage';
 import { MoviesPurchasedPage } from './pages/Explore/MoviePurchasedPage';
+import { LiveHomePage } from './pages/Explore/LiveHomePage';
+import { LiveAboutPage } from './pages/Explore/LiveAboutPage';
  
 interface Props{
     openNavFunc(props: boolean): void;
@@ -129,10 +131,26 @@ export const Routes: React.FC<Props> = (props) => {
                             </>
                         )
                     }} />
+
+                <Route
+                    exact
+                    path={['/explore/live', '/explore/live/home']}
+                    render={() => {
+                        return(
+                            <>
+                                <Redirect from='/explore/live' to='/explore/live/home' />
+                                <LiveHomePage {...props} />
+                            </>
+                        )
+                    }} />
                 <Route
                     exact
                     path='/explore/movies/purchased'
                     render={()=>(<MoviesPurchasedPage {...props} />)} />
+                <Route
+                    exact
+                    path='/explore/live/about'
+                    render={()=>(<LiveAboutPage {...props} />)} />
 
                 <Route
                     exact

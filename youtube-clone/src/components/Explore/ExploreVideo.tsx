@@ -1,4 +1,3 @@
-import { ExploreContainer } from '../styles/explore/ExploreContainer';
 import { ExploreVideoContainer } from '../styles/explore/ExploreVideoContainer';
 import { ExploreVideo } from '../styles/explore/ExploreVideo';
 import { ExploreVideoImage } from '../styles/explore/ExploreVideoImage';
