@@ -8,12 +8,16 @@ import { ChannelStatsInfo } from "../styles/Channel/ChannelStatsInfo";
 import { VideoViews } from "../styles/Channel/VideoViews";
 import { VideoDate } from "../styles/Channel/VideoDate";
 
-export const ChannelVideos = () => {
+interface Props{
+    sectionParagraph: string;
+}
+
+export const ChannelVideos: React.FC<Props> = ({ sectionParagraph }) => {
     return(
         <ChannelChannelsContainer>
-            <ChannelVideoParagraph>Uploads</ChannelVideoParagraph>
+            <ChannelVideoParagraph>{sectionParagraph}</ChannelVideoParagraph>
             <ChannelVideoSpace>
-            <ChannelHomeVideo>
+                <ChannelHomeVideo>
                     <ChannelHomeVideoBackground></ChannelHomeVideoBackground>
                     <ChannelHomeVideoTitle>This is a title</ChannelHomeVideoTitle>
                     <ChannelStatsInfo>

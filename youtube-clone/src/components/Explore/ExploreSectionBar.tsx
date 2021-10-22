@@ -13,10 +13,12 @@ export const ExploreSectionBar = () => {
                     <Paragraph>Trending</Paragraph>
                 </ExploreCategoryCard>
             </Link>
-            <ExploreCategoryCard>
-                <Icon className="material-icons">volume_up</Icon>
-                <Paragraph>Music</Paragraph>
-            </ExploreCategoryCard>
+            <Link to='/explore/music/home'>
+                <ExploreCategoryCard>
+                    <Icon className="material-icons">volume_up</Icon>
+                    <Paragraph>Music</Paragraph>
+                </ExploreCategoryCard>
+            </Link>
             <ExploreCategoryCard>
                 <Icon className="material-icons">local_movies</Icon>
                 <Paragraph>Movies</Paragraph>

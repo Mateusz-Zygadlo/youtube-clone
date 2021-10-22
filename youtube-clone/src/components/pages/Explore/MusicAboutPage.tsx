@@ -1,10 +1,10 @@
-import { GlobalStyle } from "../../styles/GlobalStyle";
 import { Navbar } from "../../Navbar";
-import { MainContent } from "../../styles/MainContent";
 import { CategorySection } from "../../CategorySection";
-import { VideoPlace } from "../../styles/VideoPlace";
-import { ChannelDescriptionSection } from "../../Channel/ChannelDescriptionSection";
-import { ChannelVideos } from "../../Channel/ChannelVideos";
+import { MainContent } from "../../styles/MainContent";
+import { GlobalStyle } from '../../styles/GlobalStyle';
+import { VideoPlace } from '../../styles/VideoPlace';
+import { MusicChannel } from '../../Explore/MusicChannel';
+import { ChannelAboutSection } from "../../Channel/ChannelAboutSection";
  
 interface Props{
     openNavFunc(props: boolean): void;
@@ -16,7 +16,7 @@ interface Props{
     minimum: boolean;
 }
 
-export const ChannelVideoPage: React.FC<Props> = ({ openNavFunc, isOpen, isLogin, setMobileWidthFunc, mobileWidth, openNav, minimum }) => {
+export const MusicAboutPage: React.FC<Props> = ({ openNavFunc, isOpen, isLogin, setMobileWidthFunc, mobileWidth, openNav, minimum }) => {
     return(
         <>
             <GlobalStyle />
@@ -35,10 +35,10 @@ export const ChannelVideoPage: React.FC<Props> = ({ openNavFunc, isOpen, isLogin
                     mobileWidth={mobileWidth} 
                     minimum={minimum}
                 >
-                    <ChannelDescriptionSection />
-                    <ChannelVideos sectionParagraph='Uploads' />
+                    <MusicChannel />
+                    <ChannelAboutSection />
                 </VideoPlace>
             </MainContent>
         </>
-    );
+    )
 }
