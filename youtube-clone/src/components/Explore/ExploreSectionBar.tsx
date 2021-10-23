@@ -43,16 +43,18 @@ export const ExploreSectionBar = () => {
                     <Paragraph>News</Paragraph>
                 </ExploreCategoryCard>
             </Link>
-            <Link to='explore/sports'>
+            <Link to='/explore/sports'>
                 <ExploreCategoryCard>
                     <Icon className="material-icons">sports</Icon>
                     <Paragraph>Sports</Paragraph>
                 </ExploreCategoryCard>
             </Link>
-            <ExploreCategoryCard>
-                <Icon className="material-icons">lightbulb</Icon>
-                <Paragraph>Learning</Paragraph>
-            </ExploreCategoryCard>
+            <Link to='/explore/learning'>
+                <ExploreCategoryCard>
+                    <Icon className="material-icons">lightbulb</Icon>
+                    <Paragraph>Learning</Paragraph>
+                </ExploreCategoryCard>
+            </Link>
             <ExploreCategoryCard>
                 <Icon className="material-icons">accessibility</Icon>
                 <Paragraph>Fashion and Beauty</Paragraph>
