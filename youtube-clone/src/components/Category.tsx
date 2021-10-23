@@ -97,26 +97,30 @@ export const Category: React.FC<Props> = ({ isLogin }) => {
                 }
                 <MoreCategory>
                     <Paragraph subs="subs">More from Youtube</Paragraph>
-                    <CategoryCard>
-                        <Icon className="material-icons">smart_display</Icon>
-                        <Paragraph>Youtube premium</Paragraph>
-                    </CategoryCard>
-                    <CategoryCard>
-                        <Icon className="material-icons">movie</Icon>
-                        <Paragraph>Movies</Paragraph>
-                    </CategoryCard>
-                    <CategoryCard>
-                        <Icon className="material-icons">sports_esports</Icon>
-                        <Paragraph>Gaming</Paragraph>
-                    </CategoryCard>
-                    <CategoryCard>
-                        <Icon className="material-icons">stream</Icon>
-                        <Paragraph>Live</Paragraph>
-                    </CategoryCard>
-                    <CategoryCard>
-                        <Icon className="material-icons">emoji_events</Icon>
-                        <Paragraph>Sports</Paragraph>
-                    </CategoryCard>
+                    <NavLink to='/explore/movies/browse' activeClassName='nowPage'>
+                        <CategoryCard>
+                            <Icon className="material-icons">movie</Icon>
+                            <Paragraph>Movies</Paragraph>
+                        </CategoryCard>
+                    </NavLink>
+                    <NavLink to='/explore/gaming' activeClassName='nowPage'>
+                        <CategoryCard>
+                            <Icon className="material-icons">sports_esports</Icon>
+                            <Paragraph>Gaming</Paragraph>
+                        </CategoryCard>
+                    </NavLink>
+                    <NavLink to='/explore/live/home' activeClassName='nowPage'>
+                        <CategoryCard>
+                            <Icon className="material-icons">stream</Icon>
+                            <Paragraph>Live</Paragraph>
+                        </CategoryCard>
+                    </NavLink>
+                    <NavLink to='/explore/sports' activeClassName='nowPage'>
+                        <CategoryCard>
+                            <Icon className="material-icons">emoji_events</Icon>
+                            <Paragraph>Sports</Paragraph>
+                        </CategoryCard>
+                    </NavLink>
                 </MoreCategory>
                 {isLogin ? 
                     null
@@ -128,26 +132,8 @@ export const Category: React.FC<Props> = ({ isLogin }) => {
                         </CategoryCard>
                     </MoreCategory>
                 }
-                <MoreCategory>
-                    <CategoryCard>
-                        <Icon className="material-icons">settings</Icon>
-                        <Paragraph>Settings</Paragraph>
-                    </CategoryCard>
-                    <CategoryCard>
-                        <Icon className="material-icons">report</Icon>
-                        <Paragraph>Report history</Paragraph>
-                    </CategoryCard>
-                    <CategoryCard>
-                        <Icon className="material-icons">help</Icon>
-                        <Paragraph>Help</Paragraph>
-                    </CategoryCard>
-                    <CategoryCard>
-                        <Icon className="material-icons">feedback</Icon>
-                        <Paragraph>Send feedback</Paragraph>
-                    </CategoryCard>
-                </MoreCategory>
                 <MoreCategory border="none">
-                    <CategoryCard>
+                    <CategoryCard marginBottom="marginBottom">
                         <Paragraph>2021</Paragraph>
                     </CategoryCard>
                 </MoreCategory>

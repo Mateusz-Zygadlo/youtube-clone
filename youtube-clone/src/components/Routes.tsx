@@ -30,6 +30,7 @@ import { NewsAboutPage } from './pages/Explore/NewsAboutPage';
 import { SportsPage } from './pages/Explore/SportsPage';
 import { LearningPage } from './pages/Explore/LearningPage';
 import { FashionPage } from './pages/Explore/FashionPage';
+import { WorkingVideo } from './pages/WorkingVideo';
   
 interface Props{
     openNavFunc(props: boolean): void;
@@ -173,6 +174,10 @@ export const Routes: React.FC<Props> = (props) => {
                     exact
                     path='/explore/gaming' 
                     render={()=>(<GamingPage {...props} />)} />
+                <Route
+                    exact
+                    path='/working-video'
+                    render={()=>(<WorkingVideo {...props} />)} />
                 <Route
                     exact
                     path='/explore/news/channels'
