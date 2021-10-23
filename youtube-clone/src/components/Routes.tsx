@@ -28,7 +28,8 @@ import { NewsHomePage } from './pages/Explore/NewsHomePage';
 import { NewsChannelPage } from './pages/Explore/NewsChannelPage';
 import { NewsAboutPage } from './pages/Explore/NewsAboutPage';
 import { SportsPage } from './pages/Explore/SportsPage';
-import { LearningPage } from './pages/Explore/LearningPage'
+import { LearningPage } from './pages/Explore/LearningPage';
+import { FashionPage } from './pages/Explore/FashionPage';
   
 interface Props{
     openNavFunc(props: boolean): void;
@@ -184,6 +185,10 @@ export const Routes: React.FC<Props> = (props) => {
                     exact
                     path='/explore/learning'
                     render={()=>(<LearningPage {...props} />)} />
+                <Route
+                    exact
+                    path='/explore/fashion'
+                    render={()=>(<FashionPage {...props} />)} />
 
                 <Route
                     exact

@@ -55,10 +55,12 @@ export const ExploreSectionBar = () => {
                     <Paragraph>Learning</Paragraph>
                 </ExploreCategoryCard>
             </Link>
-            <ExploreCategoryCard>
-                <Icon className="material-icons">accessibility</Icon>
-                <Paragraph>Fashion and Beauty</Paragraph>
-            </ExploreCategoryCard>
+            <Link to='/explore/fashion'>
+                <ExploreCategoryCard>
+                    <Icon className="material-icons">accessibility</Icon>
+                    <Paragraph>Fashion and Beauty</Paragraph>
+                </ExploreCategoryCard>
+            </Link>
         </ExploreSection>
     )
 }
