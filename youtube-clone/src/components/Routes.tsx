@@ -23,7 +23,11 @@ import { MoviesBrowsePage } from './pages/Explore/MoviesBrowsePage';
 import { MoviesPurchasedPage } from './pages/Explore/MoviePurchasedPage';
 import { LiveHomePage } from './pages/Explore/LiveHomePage';
 import { LiveAboutPage } from './pages/Explore/LiveAboutPage';
-import { GamingPage } from './pages/Explore/GamingPage'
+import { GamingPage } from './pages/Explore/GamingPage';
+import { NewsHomePage } from './pages/Explore/NewsHomePage';
+import { NewsChannelPage } from './pages/Explore/NewsChannelPage';
+import { NewsAboutPage } from './pages/Explore/NewsAboutPage';
+import { SportsPage } from './pages/Explore/SportsPage'
  
 interface Props{
     openNavFunc(props: boolean): void;
@@ -150,12 +154,31 @@ export const Routes: React.FC<Props> = (props) => {
                     render={()=>(<MoviesPurchasedPage {...props} />)} />
                 <Route
                     exact
+                    path={['/explore/news', '/explore/news/home']}
+                    render={() => {
+                        return(
+                            <>
+                                <Redirect from='/explore/news' to='/explore/news/home' />
+                                <NewsHomePage {...props} />
+                            </>
+                        )
+                    }} />
+                <Route
+                    exact
                     path='/explore/live/about'
                     render={()=>(<LiveAboutPage {...props} />)} />
                 <Route
                     exact
                     path='/explore/gaming' 
                     render={()=>(<GamingPage {...props} />)} />
+                <Route
+                    exact
+                    path='/explore/news/channels'
+                    render={()=>(<NewsChannelPage {...props} />)} />
+                <Route
+                    exact
+                    path='/explore/news/about'
+                    render={()=>(<NewsAboutPage {...props} />)} />
 
                 <Route
                     exact
@@ -165,6 +188,10 @@ export const Routes: React.FC<Props> = (props) => {
                     exact
                     path='/channel/playlists'
                     render={()=>(<ChannelPlaylistsPage {...props} />)} />
+                <Route
+                    exact
+                    path='/explore/sports'
+                    render={()=>(<SportsPage {...props} />)} />
                 <Route
                     exact
                     path='/channel/playlists/one'

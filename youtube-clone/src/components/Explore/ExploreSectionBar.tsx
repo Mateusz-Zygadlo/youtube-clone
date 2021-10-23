@@ -31,20 +31,24 @@ export const ExploreSectionBar = () => {
                     <Paragraph>Live</Paragraph>
                 </ExploreCategoryCard>
             </Link>
-            <Link to='explore/gaming'>
+            <Link to='/explore/gaming'>
                 <ExploreCategoryCard>
                     <Icon className="material-icons">sports_esports</Icon>
                     <Paragraph>Gaming</Paragraph>
                 </ExploreCategoryCard>
             </Link>
-            <ExploreCategoryCard>
-                <Icon className="material-icons">article</Icon>
-                <Paragraph>News</Paragraph>
-            </ExploreCategoryCard>
-            <ExploreCategoryCard>
-                <Icon className="material-icons">sports</Icon>
-                <Paragraph>Sports</Paragraph>
-            </ExploreCategoryCard>
+            <Link to='/explore/news/home'>
+                <ExploreCategoryCard>
+                    <Icon className="material-icons">article</Icon>
+                    <Paragraph>News</Paragraph>
+                </ExploreCategoryCard>
+            </Link>
+            <Link to='explore/sports'>
+                <ExploreCategoryCard>
+                    <Icon className="material-icons">sports</Icon>
+                    <Paragraph>Sports</Paragraph>
+                </ExploreCategoryCard>
+            </Link>
             <ExploreCategoryCard>
                 <Icon className="material-icons">lightbulb</Icon>
                 <Paragraph>Learning</Paragraph>
