@@ -3,9 +3,9 @@ import { CategorySection } from "../../CategorySection";
 import { MainContent } from "../../styles/MainContent";
 import { GlobalStyle } from '../../styles/GlobalStyle';
 import { VideoPlace } from '../../styles/VideoPlace';
-import { ExploreContainer } from '../../styles/explore/ExploreContainer';
-import { MoviesVideo } from '../../Explore/MoviesVideo';
-import { MoviesNavbar } from "../../Explore/MoviesNavbar";
+import { ExploreContainer } from '../../styles/Explore/ExploreContainer';
+import { MoviesPurchasedVideos } from '../../Explore/Movies/MoviesPurchasedVideos';
+import { MoviesNavbar } from "../../Explore/Movies/MoviesNavbar";
 
 interface Props{
     openNavFunc(props: boolean): void;
@@ -38,7 +38,7 @@ export const MoviesPurchasedPage: React.FC<Props> = ({ openNavFunc, isOpen, isLo
                 >
                     <ExploreContainer>
                         <MoviesNavbar />
-                        <MoviesVideo movieSectionName='Your films' />
+                        <MoviesPurchasedVideos movieSectionName='Your films' />
                     </ExploreContainer>
                 </VideoPlace>
             </MainContent>

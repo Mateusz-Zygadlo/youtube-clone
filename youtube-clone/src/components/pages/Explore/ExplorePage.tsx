@@ -3,7 +3,7 @@ import { CategorySection } from "../../CategorySection";
 import { MainContent } from "../../styles/MainContent";
 import { GlobalStyle } from '../../styles/GlobalStyle';
 import { VideoPlace } from '../../styles/VideoPlace';
-import { ExploreTrends } from '../../Explore/ExploreTrends';
+import { ExploreTrends } from '../../Explore/Home/ExploreTrends';
 
 interface Props{
     openNavFunc(props: boolean): void;

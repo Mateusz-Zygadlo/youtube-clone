@@ -1,7 +1,7 @@
-import { MobileCategoryContainer } from './styles/categorySection/MobileCategoryContainer';
-import { MobileIconCard } from './styles/categorySection/MobileIconCard';
-import { Icon } from './styles/navbar/Icon';
-import { Paragraph } from './styles/categorySection/Paragraph';
+import { MobileCategoryContainer } from './styles/CategorySection/MobileCategoryContainer';
+import { MobileIconCard } from './styles/CategorySection/MobileIconCard';
+import { Icon } from './styles/Navbar/Icon';
+import { Paragraph } from './styles/CategorySection/Paragraph';
 import { NavLink } from 'react-router-dom';
 
 export const MobileCategory = () => {

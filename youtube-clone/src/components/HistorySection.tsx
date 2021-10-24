@@ -1,14 +1,14 @@
-import { SubscriptionContainer } from "./styles/subscriptionsPage/SubscriptionContainer";
-import { SubscriptionParagraph } from "./styles/subscriptionsPage/SubscriptionParagraph";
-import { SubscriptionVideoSection } from "./styles/subscriptionsPage/SubscriptionVideoSection";
-import { SubscriptionVideo } from "./styles/subscriptionsPage/SubscriptionVideo";
-import { SubscriptionVideoImage } from "./styles/subscriptionsPage/SubscriptionVideoImage";
-import { SubscriptionDescriptionVideo } from "./styles/subscriptionsPage/SubscriptionDescriptionVideo";
-import { SubscriptionTitleVideo } from "./styles/subscriptionsPage/SubscriptionTitleVideo";
-import { SubscriptionOwnerVideo } from "./styles/subscriptionsPage/SubscriptionOwnerVideo";
-import { SubscriptionStats } from "./styles/subscriptionsPage/SubscriptionStats";
-import { SubscriptionView } from "./styles/subscriptionsPage/SubscriptionView";
-import { SubscriptionDate } from "./styles/subscriptionsPage/SubscriptionDate";
+import { SubscriptionContainer } from "./styles/SubscriptionsPage/SubscriptionContainer";
+import { SubscriptionParagraph } from "./styles/SubscriptionsPage/SubscriptionParagraph";
+import { SubscriptionVideoSection } from "./styles/SubscriptionsPage/SubscriptionVideoSection";
+import { SubscriptionVideo } from "./styles/SubscriptionsPage/SubscriptionVideo";
+import { SubscriptionVideoImage } from "./styles/SubscriptionsPage/SubscriptionVideoImage";
+import { SubscriptionDescriptionVideo } from "./styles/SubscriptionsPage/SubscriptionDescriptionVideo";
+import { SubscriptionTitleVideo } from "./styles/SubscriptionsPage/SubscriptionTitleVideo";
+import { SubscriptionOwnerVideo } from "./styles/SubscriptionsPage/SubscriptionOwnerVideo";
+import { SubscriptionStats } from "./styles/SubscriptionsPage/SubscriptionStats";
+import { SubscriptionView } from "./styles/SubscriptionsPage/SubscriptionView";
+import { SubscriptionDate } from "./styles/SubscriptionsPage/SubscriptionDate";
 
 export const HistorySection = () => {
     return(

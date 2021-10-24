@@ -3,9 +3,9 @@ import { CategorySection } from "../../CategorySection";
 import { MainContent } from "../../styles/MainContent";
 import { GlobalStyle } from '../../styles/GlobalStyle';
 import { VideoPlace } from '../../styles/VideoPlace';
-import { LiveNavbar } from "../../Explore/LiveNavbar";
-import { ExploreContainer } from '../../styles/explore/ExploreContainer';
-import { LiveSection } from '../../Explore/LiveSection';
+import { LiveNavbar } from "../../Explore/Live/LiveNavbar";
+import { ExploreContainer } from '../../styles/Explore/ExploreContainer';
+import { LiveSection } from '../../Explore/Live/LiveSection';
 
 interface Props{
     openNavFunc(props: boolean): void;

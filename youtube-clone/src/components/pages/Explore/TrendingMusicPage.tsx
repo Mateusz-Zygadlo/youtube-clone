@@ -3,9 +3,9 @@ import { CategorySection } from "../../CategorySection";
 import { MainContent } from "../../styles/MainContent";
 import { GlobalStyle } from '../../styles/GlobalStyle';
 import { VideoPlace } from '../../styles/VideoPlace';
-import { ExploreVideos } from '../../Explore/ExploreVideo';
-import { ExploreContainer } from '../../styles/explore/ExploreContainer';
-import { ExploreTrendingNavbar } from '../../Explore/ExploreTrendingNavbar'
+import { MusicSectionVideo } from '../../Explore/Trending/Music/MusicSectionVideo';
+import { ExploreContainer } from '../../styles/Explore/ExploreContainer';
+import { ExploreTrendingNavbar } from '../../Explore/Home/ExploreTrendingNavbar'
 
 interface Props{
     openNavFunc(props: boolean): void;
@@ -38,7 +38,7 @@ export const TrendingMusicPage: React.FC<Props> = ({ openNavFunc, isOpen, isLogi
                 >
                     <ExploreContainer>
                         <ExploreTrendingNavbar />
-                        <ExploreVideos />
+                        <MusicSectionVideo />
                     </ExploreContainer>
                 </VideoPlace>
             </MainContent>

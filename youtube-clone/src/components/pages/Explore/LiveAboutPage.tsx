@@ -3,9 +3,9 @@ import { CategorySection } from "../../CategorySection";
 import { MainContent } from "../../styles/MainContent";
 import { GlobalStyle } from '../../styles/GlobalStyle';
 import { VideoPlace } from '../../styles/VideoPlace';
-import { LiveNavbar } from "../../Explore/LiveNavbar";
-import { ExploreContainer } from '../../styles/explore/ExploreContainer';
-import { ChannelAboutSection } from '../../Channel/ChannelAboutSection';
+import { LiveNavbar } from "../../Explore/Live/LiveNavbar";
+import { ExploreContainer } from '../../styles/Explore/ExploreContainer';
+import { LiveAboutSection } from '../../Explore/Live/LiveAboutSection';
 
 interface Props{
     openNavFunc(props: boolean): void;
@@ -38,7 +38,7 @@ export const LiveAboutPage: React.FC<Props> = ({ openNavFunc, isOpen, isLogin, s
                 >
                     <ExploreContainer>
                         <LiveNavbar />
-                        <ChannelAboutSection />
+                        <LiveAboutSection />
                     </ExploreContainer>
                 </VideoPlace>
             </MainContent>

@@ -1,6 +1,6 @@
 import { VideoPlaysReaction } from "./styles/PlaysVideo/VideoPlaysReaction";
 import { VideoPlaysReactionCard } from "./styles/PlaysVideo/VideoPlaysReactionCard";
-import { Icon } from "./styles/navbar/Icon";
+import { Icon } from "./styles/Navbar/Icon";
 import { VideoPlaysChannelSection } from "./styles/PlaysVideo/VideoPlaysChannelSection";
 import { VideoPlaceChannelInfo } from "./styles/PlaysVideo/VideoPlaceChannelInfo";
 import { ChannelButton } from "./styles/Channel/ChannelButton";

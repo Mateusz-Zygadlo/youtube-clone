@@ -3,8 +3,8 @@ import { CategorySection } from "../../CategorySection";
 import { MainContent } from "../../styles/MainContent";
 import { GlobalStyle } from '../../styles/GlobalStyle';
 import { VideoPlace } from '../../styles/VideoPlace';
-import { MusicChannel } from '../../Explore/MusicChannel';
-import { ChannelAboutSection } from "../../Channel/ChannelAboutSection";
+import { MusicChannel } from '../../Explore/Music/MusicChannel';
+import { MusicAboutSection } from "../../Explore/Music/MusicAboutSection";
  
 interface Props{
     openNavFunc(props: boolean): void;
@@ -36,7 +36,7 @@ export const MusicAboutPage: React.FC<Props> = ({ openNavFunc, isOpen, isLogin, 
                     minimum={minimum}
                 >
                     <MusicChannel />
-                    <ChannelAboutSection />
+                    <MusicAboutSection />
                 </VideoPlace>
             </MainContent>
         </>

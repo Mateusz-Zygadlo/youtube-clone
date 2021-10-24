@@ -1,18 +1,18 @@
 import React from 'react';
-import { CategoryContainer } from './styles/categorySection/CategoryContainer';
-import { Popular } from './styles/categorySection/Popular';
-import { CategoryCard } from './styles/categorySection/CategoryCard';
-import { Icon } from './styles/navbar/Icon';
-import { Paragraph } from './styles/categorySection/Paragraph';
-import { UserSection } from './styles/categorySection/UserSection';
-import { LoginSection } from './styles/categorySection/LoginSection';
-import { Button } from './styles/navbar/Button';
-import { SubscriptionSection } from './styles/categorySection/SubscriptionsSection';
-import { SubscriptionCard } from './styles/categorySection/SubscriptionCard';
-import { UserAvatar } from './styles/categorySection/UserAvatar';
-import { UserNickname } from './styles/categorySection/UserNickname';
-import { AvatarImage } from './styles/categorySection/AvatarImage';
-import { MoreCategory } from './styles/categorySection/MoreCategory';
+import { CategoryContainer } from './styles/CategorySection/CategoryContainer';
+import { Popular } from './styles/CategorySection/Popular';
+import { CategoryCard } from './styles/CategorySection/CategoryCard';
+import { Icon } from './styles/Navbar/Icon';
+import { Paragraph } from './styles/CategorySection/Paragraph';
+import { UserSection } from './styles/CategorySection/UserSection';
+import { LoginSection } from './styles/CategorySection/LoginSection';
+import { Button } from './styles/Navbar/Button';
+import { SubscriptionSection } from './styles/CategorySection/SubscriptionsSection';
+import { SubscriptionCard } from './styles/CategorySection/SubscriptionCard';
+import { UserAvatar } from './styles/CategorySection/UserAvatar';
+import { UserNickname } from './styles/CategorySection/UserNickname';
+import { AvatarImage } from './styles/CategorySection/AvatarImage';
+import { MoreCategory } from './styles/CategorySection/MoreCategory';
 import { NavLink } from 'react-router-dom'
 
 interface Props{

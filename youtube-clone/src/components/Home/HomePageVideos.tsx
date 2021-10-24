@@ -1,7 +1,7 @@
 import { Video } from "../styles/Home/Video/Video";
 import { VideoImage } from "../styles/Home/Video/VideoImage";
 import { ShortText } from "../styles/Home/Video/ShortText";
-import { Avatar } from "../styles/navbar/Avatar";
+import { Avatar } from "../styles/Navbar/Avatar";
 import { DescriptionVideo } from "../styles/Home/Video/DescriptionVideo";
 import { TitleVideo } from "../styles/Home/Video/TitleVideo";
 import { OwnerChannel } from "../styles/Home/Video/OwnerChannel";

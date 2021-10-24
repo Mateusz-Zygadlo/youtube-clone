@@ -1,13 +1,13 @@
-import { ExploreVideoContainer } from '../styles/explore/ExploreVideoContainer';
-import { ExploreVideo } from '../styles/explore/ExploreVideo';
-import { ExploreVideoImage } from '../styles/explore/ExploreVideoImage';
-import { ExploreDescriptionVideo } from '../styles/explore/ExploreDescriptionVideo';
-import { ExploreTitleVideo } from '../styles/explore/ExploreTitleVideo';
-import { ExploreStats } from '../styles/explore/ExploreStats';
-import { ExploreOwnerVideo } from '../styles/explore/ExploreOwnerVideo';
-import { ExploreViews } from '../styles/explore/ExploreViews';
-import { ExploreDate } from '../styles/explore/ExploreDate';
-import { ExploreDescription } from '../styles/explore/ExploreDescription';
+import { ExploreVideoContainer } from '../styles/Explore/Home/ExploreVideoContainer';
+import { ExploreVideo } from '../styles/Explore/Home/ExploreVideo';
+import { ExploreVideoImage } from '../styles/Explore/Home/ExploreVideoImage';
+import { ExploreDescriptionVideo } from '../styles/Explore/Home/ExploreDescriptionVideo';
+import { ExploreTitleVideo } from '../styles/Explore/Home/ExploreTitleVideo';
+import { ExploreStats } from '../styles/Explore/Home/ExploreStats';
+import { ExploreOwnerVideo } from '../styles/Explore/Home/ExploreOwnerVideo';
+import { ExploreViews } from '../styles/Explore/Home/ExploreViews';
+import { ExploreDate } from '../styles/Explore/Home/ExploreDate';
+import { ExploreDescription } from '../styles/Explore/Home/ExploreDescription';
 
 export const ExploreVideos = () => {
     return(

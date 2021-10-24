@@ -3,8 +3,8 @@ import { CategorySection } from "../../CategorySection";
 import { MainContent } from "../../styles/MainContent";
 import { GlobalStyle } from '../../styles/GlobalStyle';
 import { VideoPlace } from '../../styles/VideoPlace';
-import { MusicChannel } from '../../Explore/MusicChannel';
-import { MusicSection } from "../../Explore/MusicSection";
+import { MusicChannel } from '../../Explore/Music/MusicChannel';
+import { MusicSection } from "../../Explore/Music/MusicSection";
  
 interface Props{
     openNavFunc(props: boolean): void;
