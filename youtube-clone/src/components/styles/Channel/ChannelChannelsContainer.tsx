@@ -6,7 +6,7 @@ export const ChannelChannelsContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 10px auto 10px auto;
+    margin: 10px auto;
     padding-bottom: 20px;
 
     @media (max-width: 1320px){
