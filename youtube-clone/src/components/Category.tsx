@@ -122,16 +122,6 @@ export const Category: React.FC<Props> = ({ isLogin }) => {
                         </CategoryCard>
                     </NavLink>
                 </MoreCategory>
-                {isLogin ? 
-                    null
-                :
-                    <MoreCategory>
-                        <CategoryCard>
-                            <Icon className="material-icons">add</Icon>
-                            <Paragraph>Browse Channels</Paragraph>
-                        </CategoryCard>
-                    </MoreCategory>
-                }
                 <MoreCategory border="none">
                     <CategoryCard marginBottom="marginBottom">
                         <Paragraph>2021</Paragraph>

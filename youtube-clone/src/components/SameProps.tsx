@@ -3,7 +3,7 @@ import { Routes } from './Routes';
 
 export const SameProps: React.FC = () => {
     const [isOpen, setNavOpen] = useState<boolean>(true);
-    const [isLogin, setLogin] = useState<boolean>(true);
+    const [isLogin, setLogin] = useState<boolean>(false);
     const [mobileWidth, setMobileWidth] = useState<boolean>(false);
     const [minimum, setMinimum] = useState<boolean>(false);
 
