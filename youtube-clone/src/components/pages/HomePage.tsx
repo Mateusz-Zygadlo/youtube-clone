@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { GlobalStyle } from "../styles/GlobalStyle";
 import { Navbar } from '../Navbar';
 import { CategorySection } from '../CategorySection';
@@ -23,24 +23,24 @@ interface Props{
 
 export const HomePage: React.FC<Props> = ({ openNavFunc, isLogin, isOpen, setMobileWidthFunc, mobileWidth, openNav, minimum, setLoginFunc }) => {
     const trendingArr = ['Javascript', 'Computer', 'Chess', 'Ruby', 'Music', 'Python', 'Movies', 'Adobe', 'Blender', 'Live', 'SpaceX', 'Tesla', 'Robots', 'Cnc', 'Seminars', 'Facebook', 'Instagram']
-    const newArr: any[] = [];
+
+    const [video, setVideos] = useState<any>([]);
+
+    const homeVideos: any[] = [];
     const db = getFirestore(app);
 
     const loadResults = async (db: any) => {
-        newArr.length = 0;
         const resultCollection = query(collection(db, 'HomePageVideos'))
-        const resultSnapshot = await getDocs(resultCollection)
+        const resultSnapshot = await getDocs(resultCollection);
 
-        console.log(resultSnapshot);
-
-        const results = resultSnapshot.docs.map(doc => {
+        const results = resultSnapshot.docs.map((doc) => {
             const background = doc.data().background;
             const data = doc.data().data;
             const ownerChannel = doc.data().ownerChannel;
             const titleVideo = doc.data().titleVideo;
             const views = doc.data().views;
 
-            newArr.push({
+            homeVideos.push({
                 background,
                 data,
                 ownerChannel,
@@ -49,7 +49,9 @@ export const HomePage: React.FC<Props> = ({ openNavFunc, isLogin, isOpen, setMob
             })
         })
 
-        return newArr;
+        setVideos(homeVideos);
+
+        return results;
     }
 
     loadResults(db);
@@ -72,7 +74,7 @@ export const HomePage: React.FC<Props> = ({ openNavFunc, isLogin, isOpen, setMob
                             <TrendingName key={item}>{item}</TrendingName>
                         ))}
                     </TrendingBar>
-                    <HomePageVideoSection newArr={newArr} />
+                    <HomePageVideoSection video={video} />
                 </VideoPlace>
             </MainContent>
         </>

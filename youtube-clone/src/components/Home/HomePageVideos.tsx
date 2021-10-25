@@ -11,30 +11,34 @@ import { Data } from "../styles/Home/Video/Data";
 import { VideoSection } from "../styles/Home/Video/VideoSection";
 
 interface Props{
-    newArr: any;
+    video: any;
 }
 
-export const HomePageVideos: React.FC<Props> = ({ newArr }) => {
+export const HomePageVideos: React.FC<Props> = ({ video }) => {
     return(
         <>
-            <VideoSection>
-                {newArr.map((item: any) => (
-                    <Video key={item.background}>
-                        <VideoImage background={item.background}></VideoImage>
-                        <ShortText>
-                            <Avatar></Avatar>
-                            <DescriptionVideo>
-                                <TitleVideo>{item.titleVideo}</TitleVideo>
-                                <OwnerChannel>{item.ownerChannel}</OwnerChannel>
-                                <Statistic>
-                                    <Views>{item.views}</Views>
-                                    <Data>{item.data}</Data>
-                                </Statistic>
-                            </DescriptionVideo>
-                        </ShortText>
-                    </Video>
-                ))}
-            </VideoSection>
+            {video ? 
+                <VideoSection>
+                    {video.map((item: any) => (
+                        <Video key={item.titleVideo}>
+                            <VideoImage background={item.background}></VideoImage>
+                            <ShortText>
+                                <Avatar></Avatar>
+                                <DescriptionVideo>
+                                    <TitleVideo>{item.titleVideo}</TitleVideo>
+                                    <OwnerChannel>{item.ownerChannel}</OwnerChannel>
+                                    <Statistic>
+                                        <Views>{item.views}</Views>
+                                        <Data>{item.data} views</Data>
+                                    </Statistic>
+                                </DescriptionVideo>
+                            </ShortText>
+                        </Video>
+                    ))}
+                </VideoSection>
+            : 
+                <div>Loading</div>
+            }
         </>
     );
 }
