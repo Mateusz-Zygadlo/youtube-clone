@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
-export const LikedVideoBackgroundFirst = styled.img`
+interface Props{
+    background?: string;
+}
+
+export const LikedVideoBackgroundFirst = styled.img<Props>`
     width: 312px;
     height: 175px;
-    background-color: pink;
+    background-color: ${props => props.background ? `${props.background}` : 'pink'};
     margin: 20px;
 
     @media (max-width: 1100px){

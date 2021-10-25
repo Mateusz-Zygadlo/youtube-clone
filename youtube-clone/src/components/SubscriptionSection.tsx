@@ -1,9 +1,13 @@
 import { SubscriptionVideos } from "./SubscriptionVideos"
 
-export const SubscriptionSection = () => {
+interface Props{
+    video: any;
+}
+
+export const SubscriptionSection: React.FC<Props> = ({ video }) => {
     return(
         <>
-            <SubscriptionVideos />
+            <SubscriptionVideos video={video} />
         </>
     )
 }

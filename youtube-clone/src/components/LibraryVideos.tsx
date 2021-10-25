@@ -10,22 +10,28 @@ import { SubscriptionStats } from "./styles/SubscriptionsPage/SubscriptionStats"
 import { SubscriptionView } from "./styles/SubscriptionsPage/SubscriptionView";
 import { SubscriptionDate } from "./styles/SubscriptionsPage/SubscriptionDate";
 
-export const LibraryVideos = () => {
+interface Props{
+    video: any;
+}
+
+export const LibraryVideos: React.FC<Props> = ({ video }) => {
     return(
         <SubscriptionContainer>
             <SubscriptionParagraph>Library</SubscriptionParagraph>
             <SubscriptionVideoSection>
-                <SubscriptionVideo>
-                    <SubscriptionVideoImage></SubscriptionVideoImage>
-                    <SubscriptionDescriptionVideo>
-                        <SubscriptionTitleVideo>this is a title this is a title this is a title</SubscriptionTitleVideo>
-                        <SubscriptionOwnerVideo>this is a Owner video</SubscriptionOwnerVideo>
-                        <SubscriptionStats>
-                            <SubscriptionView>3.4k views</SubscriptionView>
-                            <SubscriptionDate>2 years ago</SubscriptionDate>
-                        </SubscriptionStats>
-                    </SubscriptionDescriptionVideo>
-                </SubscriptionVideo>
+                {video.map((item: any) => (
+                    <SubscriptionVideo key={item.titleVideo}>
+                        <SubscriptionVideoImage background={item.background}></SubscriptionVideoImage>
+                        <SubscriptionDescriptionVideo>
+                            <SubscriptionTitleVideo>{item.titleVideo}</SubscriptionTitleVideo>
+                            <SubscriptionOwnerVideo>{item.ownerChannel}</SubscriptionOwnerVideo>
+                            <SubscriptionStats>
+                                <SubscriptionView>{item.views}</SubscriptionView>
+                                <SubscriptionDate>{item.data}</SubscriptionDate>
+                            </SubscriptionStats>
+                        </SubscriptionDescriptionVideo>
+                    </SubscriptionVideo>
+                ))}
             </SubscriptionVideoSection>
         </SubscriptionContainer>
     );

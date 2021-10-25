@@ -7,8 +7,7 @@ import { VideoPlace } from "../styles/VideoPlace";
 import { TrendingBar } from "../styles/Home/TrendingBar/Trendingbar";
 import { TrendingName } from "../styles/Home/TrendingBar/TrendingName";
 import { HomePageVideoSection } from "../Home/HomePageVideoSection";
-import { getFirestore, collection, getDocs, query } from 'firebase/firestore';
-import { app } from '../Firebase';
+import { loadResults } from '../FirebaseVideos';
 
 interface Props{
     openNavFunc(props: boolean): void;
@@ -26,35 +25,11 @@ export const HomePage: React.FC<Props> = ({ openNavFunc, isLogin, isOpen, setMob
 
     const [video, setVideos] = useState<any>([]);
 
-    const homeVideos: any[] = [];
-    const db = getFirestore(app);
-
-    const loadResults = async (db: any) => {
-        const resultCollection = query(collection(db, 'HomePageVideos'))
-        const resultSnapshot = await getDocs(resultCollection);
-
-        const results = resultSnapshot.docs.map((doc) => {
-            const background = doc.data().background;
-            const data = doc.data().data;
-            const ownerChannel = doc.data().ownerChannel;
-            const titleVideo = doc.data().titleVideo;
-            const views = doc.data().views;
-
-            homeVideos.push({
-                background,
-                data,
-                ownerChannel,
-                titleVideo,
-                views
-            })
-        })
-
-        setVideos(homeVideos);
-
-        return results;
+    const setVideosFunc = (props: any) => {
+        setVideos(props);
     }
 
-    loadResults(db);
+    loadResults(setVideosFunc, 'HomePageVideos');
 
     return(
         <>

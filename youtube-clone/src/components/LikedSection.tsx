@@ -1,9 +1,13 @@
 import { LikedVideos } from "./LikedVideos";
 
-export const LikedSection = () => {
+interface Props{
+    video: any;
+}
+
+export const LikedSection: React.FC<Props> = ({ video}) => {
     return(
         <>
-            <LikedVideos />
+            <LikedVideos video={video} />
         </>
     );
 }

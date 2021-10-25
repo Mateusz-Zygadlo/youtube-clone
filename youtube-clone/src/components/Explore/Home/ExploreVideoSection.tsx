@@ -1,9 +1,13 @@
 import { ExploreVideos } from '../Home/ExploreVideos';
 
-export const ExploreVideoSection = () => {
+interface Props{
+    video: any;
+}
+
+export const ExploreVideoSection: React.FC<Props> = ({ video }) => {
     return(
         <>
-            <ExploreVideos />
+            <ExploreVideos video={video} />
         </>
     );
 }

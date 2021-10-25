@@ -11,8 +11,11 @@ import { LikedDescriptionVideo } from "./styles/LikedSection/LikedDescriptionVid
 import { LikedTitleVideo } from "./styles/LikedSection/LikedTitleVideo";
 import { LikedOwnerChannel } from "./styles/LikedSection/LikedOwnerChannel";
 
+interface Props{
+    video: any;
+}
 
-export const LikedVideos = () => {
+export const LikedVideos: React.FC<Props> = ({ video }) => {
     return(
         <LikedContainer>
             <FirstVideo>
@@ -22,13 +25,15 @@ export const LikedVideos = () => {
                 <PublicFolder>Public</PublicFolder>
             </FirstVideo>
             <LikedVideoSection>
-                <LikedVideo>
-                    <LikedVideoImage></LikedVideoImage>
-                    <LikedDescriptionVideo>
-                        <LikedTitleVideo>this is a title</LikedTitleVideo>
-                        <LikedOwnerChannel>Owner Channel</LikedOwnerChannel>
-                    </LikedDescriptionVideo>
-                </LikedVideo>
+                {video.map((item: any) => (
+                    <LikedVideo key={item.titleVideo}>
+                        <LikedVideoImage background={item.background}></LikedVideoImage>
+                        <LikedDescriptionVideo>
+                            <LikedTitleVideo>{item.titleVideo}</LikedTitleVideo>
+                            <LikedOwnerChannel>{item.ownerChannel}</LikedOwnerChannel>
+                        </LikedDescriptionVideo>
+                    </LikedVideo>
+                ))}
             </LikedVideoSection>
         </LikedContainer>
     );

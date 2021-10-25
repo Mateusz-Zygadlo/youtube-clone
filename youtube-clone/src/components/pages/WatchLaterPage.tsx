@@ -4,6 +4,8 @@ import { MainContent } from "../styles/MainContent";
 import { CategorySection } from "../CategorySection";
 import { VideoPlace } from "../styles/VideoPlace";
 import { WatchLaterSection } from "../WatchLaterSection";
+import { loadResults } from '../FirebaseVideos';
+import { useState } from "react";
 
 interface Props{
     openNavFunc(props: boolean): void;
@@ -17,6 +19,14 @@ interface Props{
 }
 
 export const WatchLaterPage: React.FC<Props> = ({ openNavFunc, isOpen, isLogin, setMobileWidthFunc, mobileWidth, openNav, minimum, setLoginFunc }) => {
+    const [video, setVideos] = useState<any>([]);
+
+    const setVideosFunc = (props: any) => {
+        setVideos(props);
+    }
+
+    loadResults(setVideosFunc, 'WatchLaterPageVideos');
+    
     return(
         <>
             <GlobalStyle />
@@ -36,7 +46,7 @@ export const WatchLaterPage: React.FC<Props> = ({ openNavFunc, isOpen, isLogin, 
                     mobileWidth={mobileWidth} 
                     minimum={minimum}
                 >
-                    <WatchLaterSection />
+                    <WatchLaterSection video={video} />
                 </VideoPlace>
             </MainContent>
         </>

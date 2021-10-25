@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
-export const SubscriptionVideoImage = styled.img`
+interface Props{
+    background?: string;
+}
+
+export const SubscriptionVideoImage = styled.div<Props>`
     width: 100%;
     height: 54%;
-    background-color: pink;
+    background-color: ${props => props.background ? `${props.background}` : 'pink'};
 `;

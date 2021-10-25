@@ -1,9 +1,13 @@
 import { WatchLaterVideos } from './WatchLaterVideos'
 
-export const WatchLaterSection = () => {
+interface Props{
+    video: any;
+}
+
+export const WatchLaterSection: React.FC<Props> = ({ video }) => {
     return(
         <>
-            <WatchLaterVideos />
+            <WatchLaterVideos video={video} />
         </>
     );
 }

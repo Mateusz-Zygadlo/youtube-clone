@@ -4,6 +4,8 @@ import { MainContent } from "../../styles/MainContent";
 import { GlobalStyle } from '../../styles/GlobalStyle';
 import { VideoPlace } from '../../styles/VideoPlace';
 import { ExploreTrends } from '../../Explore/Home/ExploreTrends';
+import { useState } from 'react';
+import { loadResults } from '../../FirebaseVideos';
 
 interface Props{
     openNavFunc(props: boolean): void;
@@ -17,6 +19,14 @@ interface Props{
 }
 
 export const ExplorePage: React.FC<Props> = ({ openNavFunc, isOpen, isLogin, setMobileWidthFunc, mobileWidth, openNav, minimum, setLoginFunc}) => {
+    const [video, setVideos] = useState<any>([]);
+
+    const setVideosFunc = (props: any) => {
+        setVideos(props);
+    }
+
+    loadResults(setVideosFunc, 'ExplorePageVideos');
+
     return(
         <>
             <GlobalStyle />
@@ -36,7 +46,7 @@ export const ExplorePage: React.FC<Props> = ({ openNavFunc, isOpen, isLogin, set
                     mobileWidth={mobileWidth} 
                     minimum={minimum}
                 >
-                    <ExploreTrends />
+                    <ExploreTrends video={video} />
                 </VideoPlace>
             </MainContent>
         </>

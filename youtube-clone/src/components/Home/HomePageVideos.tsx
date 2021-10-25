@@ -28,15 +28,15 @@ export const HomePageVideos: React.FC<Props> = ({ video }) => {
                                     <TitleVideo>{item.titleVideo}</TitleVideo>
                                     <OwnerChannel>{item.ownerChannel}</OwnerChannel>
                                     <Statistic>
-                                        <Views>{item.views}</Views>
-                                        <Data>{item.data} views</Data>
+                                        <Views>{item.views} views</Views>
+                                        <Data>{item.data}</Data>
                                     </Statistic>
                                 </DescriptionVideo>
                             </ShortText>
                         </Video>
                     ))}
                 </VideoSection>
-            : 
+            :
                 <div>Loading</div>
             }
         </>

@@ -1,4 +1,3 @@
-import { ExploreVideoContainer } from '../../styles/Explore/Home/ExploreVideoContainer';
 import { ExploreVideo } from '../../styles/Explore/Home/ExploreVideo';
 import { ExploreVideoImage } from '../../styles/Explore/Home/ExploreVideoImage';
 import { ExploreDescriptionVideo } from '../../styles/Explore/Home/ExploreDescriptionVideo';
@@ -7,21 +6,27 @@ import { ExploreStats } from '../../styles/Explore/Home/ExploreStats';
 import { ExploreOwnerVideo } from '../../styles/Explore/Home/ExploreOwnerVideo';
 import { ExploreViews } from '../../styles/Explore/Home/ExploreViews';
 import { ExploreDate } from '../../styles/Explore/Home/ExploreDate';
-import { ExploreDescription } from '../../styles/Explore/Home/ExploreDescription';
 
-export const ExploreVideos = () => {
+interface Props{
+    video: any;
+}
+
+export const ExploreVideos: React.FC<Props> = ({ video }) => {
     return(
-        <ExploreVideo>
-            <ExploreVideoImage></ExploreVideoImage>
-            <ExploreDescriptionVideo>
-                <ExploreTitleVideo>This is a title This is a titleT his is a title This is a title This is a title This is a titleThis is a titleThis is a titleThis is a titleThis is a title This is a titleThis is a titleThis is a titleThis is a titleThis is a title</ExploreTitleVideo>
-                <ExploreStats>
-                    <ExploreOwnerVideo>Owner Video</ExploreOwnerVideo>
-                    <ExploreViews>4.5M views</ExploreViews>
-                    <ExploreDate>2 days ago</ExploreDate>
-                </ExploreStats>
-                <ExploreDescription>this is a descriptionthis is a descriptionthis is a descriptionthis is a descriptionthis is a descriptionthis is a descriptionthis is a descriptionthis is a descriptionthis is a descriptionthis is a descriptionthis is a descriptionthis is a descriptionthis is a descriptionthis is a descriptionthis is a description</ExploreDescription>
-            </ExploreDescriptionVideo>
-        </ExploreVideo>
+        <>
+            {video.map((item: any) => (
+                <ExploreVideo key={item.views}>
+                    <ExploreVideoImage background={item.background}></ExploreVideoImage>
+                    <ExploreDescriptionVideo>
+                        <ExploreTitleVideo>{item.titleVideo}</ExploreTitleVideo>
+                        <ExploreStats>
+                            <ExploreOwnerVideo>{item.ownerChannel}</ExploreOwnerVideo>
+                            <ExploreViews>{item.views}</ExploreViews>
+                            <ExploreDate>{item.data}</ExploreDate>
+                        </ExploreStats>
+                    </ExploreDescriptionVideo>
+                </ExploreVideo>
+            ))}
+        </>
     )
 }

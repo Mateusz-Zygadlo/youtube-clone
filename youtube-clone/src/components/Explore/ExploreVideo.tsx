@@ -9,6 +9,7 @@ import { ExploreViews } from '../styles/Explore/Home/ExploreViews';
 import { ExploreDate } from '../styles/Explore/Home/ExploreDate';
 import { ExploreDescription } from '../styles/Explore/Home/ExploreDescription';
 
+
 export const ExploreVideos = () => {
     return(
         <ExploreVideoContainer>

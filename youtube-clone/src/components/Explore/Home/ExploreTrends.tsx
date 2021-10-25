@@ -4,14 +4,17 @@ import { ExploreVideoContainer } from '../../styles/Explore/Home/ExploreVideoCon
 import { ExploreParagraph } from '../../styles/Explore/Home/ExploreParagraph';
 import { ExploreVideoSection } from '../../Explore/Home/ExploreVideoSection';
 
+interface Props{
+    video: any;
+}
 
-export const ExploreTrends = () => {
+export const ExploreTrends: React.FC<Props> = ({ video }) => {
     return(
         <ExploreContainer>
             <ExploreSectionBar />
             <ExploreVideoContainer>
                 <ExploreParagraph>Trending videos</ExploreParagraph>
-                <ExploreVideoSection />
+                <ExploreVideoSection video={video} />
             </ExploreVideoContainer>
         </ExploreContainer>
     )

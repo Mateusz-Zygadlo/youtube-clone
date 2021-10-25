@@ -1,9 +1,13 @@
 import { LibraryVideos } from './LibraryVideos';
 
-export const LibrarySection = () => {
+interface Props{
+    video: any;
+}
+
+export const LibrarySection: React.FC<Props> = ({ video }) => {
     return(
         <>
-            <LibraryVideos />
+            <LibraryVideos video={video} />
         </>
     )
 }

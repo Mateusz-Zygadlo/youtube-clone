@@ -1,9 +1,13 @@
 import { HistoryVideos } from './HistoryVideos';
 
-export const HistorySection = () => {
+interface Props{
+    video: any;
+}
+
+export const HistorySection: React.FC<Props> = ({ video }) => {
     return(
         <>
-            <HistoryVideos />
+            <HistoryVideos video={video} />
         </>
     )
 }
