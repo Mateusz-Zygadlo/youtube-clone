@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Routes } from './Routes';
+import { auth } from './LoginFunction';
 
 export const SameProps: React.FC = () => {
     const [isOpen, setNavOpen] = useState<boolean>(true);
@@ -7,12 +8,24 @@ export const SameProps: React.FC = () => {
     const [mobileWidth, setMobileWidth] = useState<boolean>(false);
     const [minimum, setMinimum] = useState<boolean>(false);
 
+    auth.onAuthStateChanged((user) => {
+        if(user){
+            setLogin(true);
+        }else{
+            setLogin(false);
+        }
+    });
+
     const setMobileWidthFunc = (props: boolean): void => {
         setMobileWidth(!props);
     }
 
     const openNav = (props: boolean): void => {
         setNavOpen(props);
+    }
+
+    const setLoginFunc = (props: boolean): void => {
+        setLogin(props);
     }
 
     useEffect(() => {
@@ -52,6 +65,7 @@ export const SameProps: React.FC = () => {
             setMobileWidthFunc={setMobileWidthFunc}
             mobileWidth={mobileWidth}
             openNav={openNav}
-            minimum={minimum} />
+            minimum={minimum}
+            setLoginFunc={setLoginFunc} />
     );
 }

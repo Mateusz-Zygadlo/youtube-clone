@@ -89,10 +89,12 @@ export const Category: React.FC<Props> = ({ isLogin }) => {
                 :
                     <LoginSection>
                         <Paragraph>Sign in to like videos, comment, and subscribe.</Paragraph>
-                        <Button>
-                            <Icon className="material-icons">account_circle</Icon>
-                            <Paragraph>Login</Paragraph>
-                        </Button>
+                        <NavLink to='/login'>
+                            <Button>
+                                <Icon className="material-icons">account_circle</Icon>
+                                <Paragraph>Login</Paragraph>
+                            </Button>
+                        </NavLink>
                     </LoginSection>
                 }
                 <MoreCategory>

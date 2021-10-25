@@ -31,6 +31,7 @@ import { SportsPage } from './pages/Explore/SportsPage';
 import { LearningPage } from './pages/Explore/LearningPage';
 import { FashionPage } from './pages/Explore/FashionPage';
 import { WorkingVideo } from './pages/WorkingVideo';
+import { LoginPage } from './pages/LoginPage';
   
 interface Props{
     openNavFunc(props: boolean): void;
@@ -40,6 +41,7 @@ interface Props{
     mobileWidth: boolean;
     openNav(props: boolean): void;
     minimum: boolean;
+    setLoginFunc(props: boolean): void;
 }
 
 export const Routes: React.FC<Props> = (props) => {
@@ -139,6 +141,10 @@ export const Routes: React.FC<Props> = (props) => {
                             </>
                         )
                     }} />
+                <Route
+                    exact
+                    path='/channel/name/:id'
+                    render={()=>(<ChannelHomePage {...props} />)} />
 
                 <Route
                     exact
@@ -219,6 +225,10 @@ export const Routes: React.FC<Props> = (props) => {
                     exact
                     path='/channel/about'
                     render={()=>(<ChannelAboutPage {...props} />)} />
+                <Route
+                    exact
+                    path='/login'
+                    render={()=>(<LoginPage {...props} />)} />
             </Switch>
         </BrowserRouter>
     )

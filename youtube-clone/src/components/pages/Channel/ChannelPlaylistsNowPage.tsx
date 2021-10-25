@@ -13,9 +13,10 @@ interface Props{
     mobileWidth: boolean;
     openNav(props: boolean): void;
     minimum: boolean;
+    setLoginFunc(props: boolean): void;
 }
 
-export const ChannelPlaylistsNowPage: React.FC<Props> = ({ openNavFunc, isOpen, isLogin, setMobileWidthFunc, mobileWidth, openNav, minimum }) => {
+export const ChannelPlaylistsNowPage: React.FC<Props> = ({ openNavFunc, isOpen, isLogin, setMobileWidthFunc, mobileWidth, openNav, minimum, setLoginFunc }) => {
     return(
         <>
             <GlobalStyle />
@@ -24,7 +25,8 @@ export const ChannelPlaylistsNowPage: React.FC<Props> = ({ openNavFunc, isOpen, 
                 isOpen={isOpen} 
                 isLogin={isLogin}
                 setMobileWidthFunc={setMobileWidthFunc}
-                mobileWidth={mobileWidth} />
+                mobileWidth={mobileWidth}
+                setLoginFunc={setLoginFunc} />
             <MainContent>
                 <CategorySection
                     isOpen={isOpen}

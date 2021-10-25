@@ -10,194 +10,30 @@ import { Views } from "../styles/Home/Video/Views";
 import { Data } from "../styles/Home/Video/Data";
 import { VideoSection } from "../styles/Home/Video/VideoSection";
 
+interface Props{
+    newArr: any;
+}
 
-export const HomePageVideos = () => {
+export const HomePageVideos: React.FC<Props> = ({ newArr }) => {
     return(
         <>
             <VideoSection>
-            <Video>
-                    <VideoImage></VideoImage>
-                    <ShortText>
-                        <Avatar></Avatar>
-                        <DescriptionVideo>
-                            <TitleVideo>This is title in youtube clone with github react typescript and styled components</TitleVideo>
-                            <OwnerChannel>Youtube channel</OwnerChannel>
-                            <Statistic>
-                                <Views>3.4k views</Views>
-                                <Data>2 years ago</Data>
-                            </Statistic>
-                        </DescriptionVideo>
-                    </ShortText>
-                </Video><Video>
-                    <VideoImage></VideoImage>
-                    <ShortText>
-                        <Avatar></Avatar>
-                        <DescriptionVideo>
-                            <TitleVideo>This is title in youtube clone with github react typescript and styled components</TitleVideo>
-                            <OwnerChannel>Youtube channel</OwnerChannel>
-                            <Statistic>
-                                <Views>3.4k views</Views>
-                                <Data>2 years ago</Data>
-                            </Statistic>
-                        </DescriptionVideo>
-                    </ShortText>
-                </Video><Video>
-                    <VideoImage></VideoImage>
-                    <ShortText>
-                        <Avatar></Avatar>
-                        <DescriptionVideo>
-                            <TitleVideo>This is title in youtube clone with github react typescript and styled components</TitleVideo>
-                            <OwnerChannel>Youtube channel</OwnerChannel>
-                            <Statistic>
-                                <Views>3.4k views</Views>
-                                <Data>2 years ago</Data>
-                            </Statistic>
-                        </DescriptionVideo>
-                    </ShortText>
-                </Video><Video>
-                    <VideoImage></VideoImage>
-                    <ShortText>
-                        <Avatar></Avatar>
-                        <DescriptionVideo>
-                            <TitleVideo>This is title in youtube clone with github react typescript and styled components</TitleVideo>
-                            <OwnerChannel>Youtube channel</OwnerChannel>
-                            <Statistic>
-                                <Views>3.4k views</Views>
-                                <Data>2 years ago</Data>
-                            </Statistic>
-                        </DescriptionVideo>
-                    </ShortText>
-                </Video><Video>
-                    <VideoImage></VideoImage>
-                    <ShortText>
-                        <Avatar></Avatar>
-                        <DescriptionVideo>
-                            <TitleVideo>This is title in youtube clone with github react typescript and styled components</TitleVideo>
-                            <OwnerChannel>Youtube channel</OwnerChannel>
-                            <Statistic>
-                                <Views>3.4k views</Views>
-                                <Data>2 years ago</Data>
-                            </Statistic>
-                        </DescriptionVideo>
-                    </ShortText>
-                </Video><Video>
-                    <VideoImage></VideoImage>
-                    <ShortText>
-                        <Avatar></Avatar>
-                        <DescriptionVideo>
-                            <TitleVideo>This is title in youtube clone with github react typescript and styled components</TitleVideo>
-                            <OwnerChannel>Youtube channel</OwnerChannel>
-                            <Statistic>
-                                <Views>3.4k views</Views>
-                                <Data>2 years ago</Data>
-                            </Statistic>
-                        </DescriptionVideo>
-                    </ShortText>
-                </Video><Video>
-                    <VideoImage></VideoImage>
-                    <ShortText>
-                        <Avatar></Avatar>
-                        <DescriptionVideo>
-                            <TitleVideo>This is title in youtube clone with github react typescript and styled components</TitleVideo>
-                            <OwnerChannel>Youtube channel</OwnerChannel>
-                            <Statistic>
-                                <Views>3.4k views</Views>
-                                <Data>2 years ago</Data>
-                            </Statistic>
-                        </DescriptionVideo>
-                    </ShortText>
-                </Video><Video>
-                    <VideoImage></VideoImage>
-                    <ShortText>
-                        <Avatar></Avatar>
-                        <DescriptionVideo>
-                            <TitleVideo>This is title in youtube clone with github react typescript and styled components</TitleVideo>
-                            <OwnerChannel>Youtube channel</OwnerChannel>
-                            <Statistic>
-                                <Views>3.4k views</Views>
-                                <Data>2 years ago</Data>
-                            </Statistic>
-                        </DescriptionVideo>
-                    </ShortText>
-                </Video><Video>
-                    <VideoImage></VideoImage>
-                    <ShortText>
-                        <Avatar></Avatar>
-                        <DescriptionVideo>
-                            <TitleVideo>This is title in youtube clone with github react typescript and styled components</TitleVideo>
-                            <OwnerChannel>Youtube channel</OwnerChannel>
-                            <Statistic>
-                                <Views>3.4k views</Views>
-                                <Data>2 years ago</Data>
-                            </Statistic>
-                        </DescriptionVideo>
-                    </ShortText>
-                </Video><Video>
-                    <VideoImage></VideoImage>
-                    <ShortText>
-                        <Avatar></Avatar>
-                        <DescriptionVideo>
-                            <TitleVideo>This is title in youtube clone with github react typescript and styled components</TitleVideo>
-                            <OwnerChannel>Youtube channel</OwnerChannel>
-                            <Statistic>
-                                <Views>3.4k views</Views>
-                                <Data>2 years ago</Data>
-                            </Statistic>
-                        </DescriptionVideo>
-                    </ShortText>
-                </Video><Video>
-                    <VideoImage></VideoImage>
-                    <ShortText>
-                        <Avatar></Avatar>
-                        <DescriptionVideo>
-                            <TitleVideo>This is title in youtube clone with github react typescript and styled components</TitleVideo>
-                            <OwnerChannel>Youtube channel</OwnerChannel>
-                            <Statistic>
-                                <Views>3.4k views</Views>
-                                <Data>2 years ago</Data>
-                            </Statistic>
-                        </DescriptionVideo>
-                    </ShortText>
-                </Video><Video>
-                    <VideoImage></VideoImage>
-                    <ShortText>
-                        <Avatar></Avatar>
-                        <DescriptionVideo>
-                            <TitleVideo>This is title in youtube clone with github react typescript and styled components</TitleVideo>
-                            <OwnerChannel>Youtube channel</OwnerChannel>
-                            <Statistic>
-                                <Views>3.4k views</Views>
-                                <Data>2 years ago</Data>
-                            </Statistic>
-                        </DescriptionVideo>
-                    </ShortText>
-                </Video><Video>
-                    <VideoImage></VideoImage>
-                    <ShortText>
-                        <Avatar></Avatar>
-                        <DescriptionVideo>
-                            <TitleVideo>This is title in youtube clone with github react typescript and styled components</TitleVideo>
-                            <OwnerChannel>Youtube channel</OwnerChannel>
-                            <Statistic>
-                                <Views>3.4k views</Views>
-                                <Data>2 years ago</Data>
-                            </Statistic>
-                        </DescriptionVideo>
-                    </ShortText>
-                </Video><Video>
-                    <VideoImage></VideoImage>
-                    <ShortText>
-                        <Avatar></Avatar>
-                        <DescriptionVideo>
-                            <TitleVideo>This is title in youtube clone with github react typescript and styled components</TitleVideo>
-                            <OwnerChannel>Youtube channel</OwnerChannel>
-                            <Statistic>
-                                <Views>3.4k views</Views>
-                                <Data>2 years ago</Data>
-                            </Statistic>
-                        </DescriptionVideo>
-                    </ShortText>
-                </Video>
+                {newArr.map((item: any) => (
+                    <Video key={item.background}>
+                        <VideoImage background={item.background}></VideoImage>
+                        <ShortText>
+                            <Avatar></Avatar>
+                            <DescriptionVideo>
+                                <TitleVideo>{item.titleVideo}</TitleVideo>
+                                <OwnerChannel>{item.ownerChannel}</OwnerChannel>
+                                <Statistic>
+                                    <Views>{item.views}</Views>
+                                    <Data>{item.data}</Data>
+                                </Statistic>
+                            </DescriptionVideo>
+                        </ShortText>
+                    </Video>
+                ))}
             </VideoSection>
         </>
     );

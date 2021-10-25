@@ -1,14 +1,13 @@
 import { HomePageVideos } from "./HomePageVideos";
 
-export const HomePageVideoSection = () => {
+interface Props{
+    newArr: string[];
+}
+
+export const HomePageVideoSection : React.FC<Props> = ({ newArr }) => {
     return(
         <>
-            <HomePageVideos />
-            <HomePageVideos />
-            <HomePageVideos />
-            <HomePageVideos />
-            <HomePageVideos />
-            <HomePageVideos />
+            <HomePageVideos newArr={newArr} />
         </>
     );
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { NavContainer } from './styles/Navbar/NavContainer';
 import { Symbol } from './styles/Navbar/Symbol';
 import { Menu } from './styles/Navbar/Menu';
@@ -19,6 +19,8 @@ import { Avatar } from "./styles/Navbar/Avatar";
 import { Login } from "./styles/Navbar/Login";
 import { Button } from "./styles/Navbar/Button";
 import { Paragraph } from "./styles/Navbar/Paragraph";
+import { getAuth, signOut } from "firebase/auth";
+import { app } from './Firebase';
 
 interface Props{
     openNavFunc(props: boolean): void;
@@ -26,9 +28,10 @@ interface Props{
     isLogin: boolean;
     setMobileWidthFunc(props: boolean): void;
     mobileWidth: boolean;
+    setLoginFunc(props: boolean): void;
 }
 
-export const Navbar: React.FC<Props> = ({ openNavFunc, isOpen, isLogin, setMobileWidthFunc, mobileWidth }) => {
+export const Navbar: React.FC<Props> = ({ openNavFunc, isOpen, isLogin, setMobileWidthFunc, mobileWidth, setLoginFunc }) => {
     const ref = useRef<any>(null);
     const [testWidth, setWidth] = useState<boolean>(false);
     const [widthSize, setWidthSize] = useState<number>(1400);
@@ -41,6 +44,15 @@ export const Navbar: React.FC<Props> = ({ openNavFunc, isOpen, isLogin, setMobil
         }else{
             openNavFunc(!props);
         }
+    }
+
+    const logout = () => {
+        const auth = getAuth(app);
+        signOut(auth).then(() => {
+            setLoginFunc(false);
+        }).catch((err) => {
+            console.log(err);
+        });
     }
 
     useEffect(() => {
@@ -90,7 +102,7 @@ export const Navbar: React.FC<Props> = ({ openNavFunc, isOpen, isLogin, setMobil
                             <Icon className="material-icons">video_call</Icon>
                             <Icon className="material-icons">apps</Icon>
                             <Icon className="material-icons">notifications</Icon>
-                            <UserIcon>
+                            <UserIcon onClick={()=>logout()}>
                                 <Avatar />
                             </UserIcon>
                         </UserSettings>
@@ -98,10 +110,12 @@ export const Navbar: React.FC<Props> = ({ openNavFunc, isOpen, isLogin, setMobil
                         <Login>
                             <Icon className="material-icons">apps</Icon>
                             <Icon className="material-icons">more_vert</Icon>
-                            <Button>
-                                <Icon className="material-icons">account_circle</Icon>
-                                <Paragraph>Login</Paragraph>
-                            </Button>
+                            <NavLink to='/login'>
+                                <Button>
+                                    <Icon className="material-icons">account_circle</Icon>
+                                    <Paragraph>Login</Paragraph>
+                                </Button>
+                            </NavLink>
                         </Login>
                     }
                 </NavContainer>
@@ -141,10 +155,12 @@ export const Navbar: React.FC<Props> = ({ openNavFunc, isOpen, isLogin, setMobil
                                 <Login>
                                     <Icon className="material-icons">apps</Icon>
                                     <Icon className="material-icons">more_vert</Icon>
-                                    <Button>
-                                        <Icon className="material-icons">account_circle</Icon>
-                                        <Paragraph>Login</Paragraph>
-                                    </Button>
+                                    <NavLink to='/login'>
+                                        <Button>
+                                            <Icon className="material-icons">account_circle</Icon>
+                                            <Paragraph>Login</Paragraph>
+                                        </Button>
+                                    </NavLink>
                         </Login>
                             }
                         </NavContainer>

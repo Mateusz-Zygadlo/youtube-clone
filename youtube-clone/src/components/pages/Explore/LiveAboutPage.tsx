@@ -15,9 +15,10 @@ interface Props{
     mobileWidth: boolean;
     openNav(props: boolean): void;
     minimum: boolean;
+    setLoginFunc(props: boolean): void;
 }
 
-export const LiveAboutPage: React.FC<Props> = ({ openNavFunc, isOpen, isLogin, setMobileWidthFunc, mobileWidth, openNav, minimum }) => {
+export const LiveAboutPage: React.FC<Props> = ({ openNavFunc, isOpen, isLogin, setMobileWidthFunc, mobileWidth, openNav, minimum, setLoginFunc }) => {
     return(
         <>
             <GlobalStyle />
@@ -26,7 +27,8 @@ export const LiveAboutPage: React.FC<Props> = ({ openNavFunc, isOpen, isLogin, s
                 isOpen={isOpen} 
                 isLogin={isLogin}
                 setMobileWidthFunc={setMobileWidthFunc}
-                mobileWidth={mobileWidth} />
+                mobileWidth={mobileWidth}
+                setLoginFunc={setLoginFunc} />
             <MainContent>
                 <CategorySection
                     isOpen={isOpen}
