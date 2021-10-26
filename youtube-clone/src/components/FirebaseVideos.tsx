@@ -14,8 +14,6 @@ export const loadResults = async (hooksFunc: any, collectionName: string) => {
         const titleVideo = doc.data().titleVideo;
         const views = doc.data().views;
 
-        console.log(doc.data());
-
         homeVideos.push({
             background,
             data,
