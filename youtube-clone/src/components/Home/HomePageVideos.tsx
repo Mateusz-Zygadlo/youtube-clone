@@ -9,6 +9,7 @@ import { Statistic } from "../styles/Home/Video/Statistic";
 import { Views } from "../styles/Home/Video/Views";
 import { Data } from "../styles/Home/Video/Data";
 import { VideoSection } from "../styles/Home/Video/VideoSection";
+import { Link } from 'react-router-dom';
 
 interface Props{
     video: any;
@@ -17,28 +18,28 @@ interface Props{
 export const HomePageVideos: React.FC<Props> = ({ video }) => {
     return(
         <>
-            {video ? 
-                <VideoSection>
-                    {video.map((item: any) => (
-                        <Video key={item.titleVideo}>
-                            <VideoImage background={item.background}></VideoImage>
-                            <ShortText>
-                                <Avatar></Avatar>
-                                <DescriptionVideo>
-                                    <TitleVideo>{item.titleVideo}</TitleVideo>
-                                    <OwnerChannel>{item.ownerChannel}</OwnerChannel>
-                                    <Statistic>
-                                        <Views>{item.views} views</Views>
-                                        <Data>{item.data}</Data>
-                                    </Statistic>
-                                </DescriptionVideo>
-                            </ShortText>
-                        </Video>
-                    ))}
-                </VideoSection>
-            :
-                <div>Loading</div>
-            }
+            <VideoSection>
+                {video.map((item: any) => (
+                    <Video key={item.titleVideo}>
+                        <VideoImage background={item.background}></VideoImage>
+                        <ShortText>
+                            <Avatar></Avatar>
+                            <DescriptionVideo>
+                                <TitleVideo>
+                                    <Link to='/working-video'>{item.titleVideo}</Link>
+                                </TitleVideo>
+                                <OwnerChannel>
+                                    <Link to='/channel'>{item.ownerChannel}</Link>
+                                </OwnerChannel>
+                                <Statistic>
+                                    <Views>{item.views} views</Views>
+                                    <Data>{item.data}</Data>
+                                </Statistic>
+                            </DescriptionVideo>
+                        </ShortText>
+                    </Video>
+                ))}
+            </VideoSection>
         </>
     );
 }

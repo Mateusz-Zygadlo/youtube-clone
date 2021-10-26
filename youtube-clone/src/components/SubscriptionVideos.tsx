@@ -9,7 +9,8 @@ import { SubscriptionOwnerVideo } from "./styles/SubscriptionsPage/SubscriptionO
 import { SubscriptionStats } from "./styles/SubscriptionsPage/SubscriptionStats";
 import { SubscriptionView } from "./styles/SubscriptionsPage/SubscriptionView";
 import { SubscriptionDate } from "./styles/SubscriptionsPage/SubscriptionDate";
-
+import { Link } from 'react-router-dom';
+ 
 interface Props{
     video: any;
 }
@@ -23,8 +24,12 @@ export const SubscriptionVideos: React.FC<Props> = ({ video }) => {
                     <SubscriptionVideo key={item.titleVideo}>
                         <SubscriptionVideoImage background={item.background}></SubscriptionVideoImage>
                         <SubscriptionDescriptionVideo>
-                            <SubscriptionTitleVideo>{item.titleVideo}</SubscriptionTitleVideo>
-                            <SubscriptionOwnerVideo>{item.ownerChannel}</SubscriptionOwnerVideo>
+                            <SubscriptionTitleVideo>
+                                <Link to='/working-video'>{item.titleVideo}</Link>
+                            </SubscriptionTitleVideo>
+                            <SubscriptionOwnerVideo>
+                                <Link to='/channel'>{item.ownerChannel}</Link>
+                            </SubscriptionOwnerVideo>
                             <SubscriptionStats>
                                 <SubscriptionView>{item.views}</SubscriptionView>
                                 <SubscriptionDate>{item.data}</SubscriptionDate>

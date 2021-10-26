@@ -141,10 +141,6 @@ export const Routes: React.FC<Props> = (props) => {
                             </>
                         )
                     }} />
-                <Route
-                    exact
-                    path='/channel/name/:id'
-                    render={()=>(<ChannelHomePage {...props} />)} />
 
                 <Route
                     exact
